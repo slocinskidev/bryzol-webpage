@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import GlobalStyle from '../styles/globalStyle'
 import { theme } from '../styles/mainTheme';
+import Footer from '../components/Footer/Footer';
 
 
 const StyledWrapper = styled.div`
@@ -21,7 +22,10 @@ const Layout = ({ children }) => (
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
-          <StyledWrapper>{children}</StyledWrapper>
+          <StyledWrapper>
+            {children}
+            <Footer />
+          </StyledWrapper>
         </>
       </ThemeProvider>
 );

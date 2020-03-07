@@ -4,7 +4,13 @@ import facebookFilled from '@iconify/icons-ant-design/facebook-filled';
 import styled from 'styled-components';
 import { theme } from '../../styles/mainTheme';
 
-const WrapperStyled = styled.div``;
+const WrapperStyled = styled.div`
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
 
 const IconStyled = styled(Icon)`
   color: ${({ theme }) => theme.color.primary};
@@ -12,16 +18,22 @@ const IconStyled = styled(Icon)`
   height: 40px;
 `;
 
-const TextStyled = styled.p``;
+const FacebookLink = styled.a`
+  font-family: ${({theme}) => theme.font.secondary};
+  color: ${({theme}) => theme.color.primary};
+  font-size: 2rem;
+  margin: 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+`;
 
 const FacebookButton = () => (
   <WrapperStyled>
-    <TextStyled>
-      <a href="https://www.facebook.com/bryzolcatering/">
+      <FacebookLink href="https://www.facebook.com/bryzolcatering/">
         Sprawdź nas na
         <IconStyled icon={facebookFilled} />
-      </a>
-    </TextStyled>
+      </FacebookLink>
   </WrapperStyled>
 );
 

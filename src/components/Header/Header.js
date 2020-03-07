@@ -8,11 +8,13 @@ const HeaderTitleStyled = styled.h2`
   font-weight: 400;
   font-size: ${({ theme }) => theme.font.h2};
   color: #fff;
+  margin: 0;
 `;
 
 const HeaderSubtitleStyled = styled.p`
   text-align: center;
   padding: 10px;
+  margin: 0;
   line-height: 1.5;
   font-size: ${({ theme }) => theme.font.normal};
 `;
@@ -23,13 +25,14 @@ const HeaderWrapperStyled = styled.header`
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 50vh;
+  height: 100%;
   background: #52542c;
   color: ${({ theme }) => theme.color.white};
+  margin: 0;
 `;
 
 const HeaderLogoStyled = styled.img`
-  margin: 20px 0 10px;
+  padding: 10px 0 5px;
   width: 150px;
   height: 150px;
 `;
