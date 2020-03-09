@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../../styles/mainTheme';
 
 const StyledFooterWrapper = styled.footer`
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;

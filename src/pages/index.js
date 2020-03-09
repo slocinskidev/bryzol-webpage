@@ -1,15 +1,15 @@
 import React from 'react';
-import Layout from '../layouts/layout';
+import MenuLayout from '../layouts/MenuLayout';
 import Header from '../components/Header/Header';
 import Navigation from '../components/Navigation/Navigation';
 import FacebookButton from '../components/FacebookButton/FacebookButton';
 
 const IndexPage = () => (
-  <Layout>
+  <MenuLayout>
     <Header />
     <FacebookButton />
     <Navigation />
-  </Layout>
+  </MenuLayout>
 );
 
 export default IndexPage;

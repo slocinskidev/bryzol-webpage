@@ -43,7 +43,7 @@ const Navigation = () => (
   <NavigationWrapper>
     <NavigationList>
       <NavigationListItem>
-        <LinkStyled to="/about">O Nas</LinkStyled>
+        <LinkStyled to="/o-nas">O Nas</LinkStyled>
       </NavigationListItem>
       <NavigationListItem>
         <LinkStyled to="/offer">Oferta</LinkStyled>

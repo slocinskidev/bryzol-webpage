@@ -9,21 +9,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-eslint',
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`400`, `700`]
-          },
-          {
-            family: `Dancing Script`,
-            variants: [`400`, `700`]
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

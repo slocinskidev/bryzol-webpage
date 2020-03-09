@@ -4,10 +4,10 @@ import { theme } from '../../styles/mainTheme';
 import logo from '../../images/logo.png';
 
 const HeaderTitleStyled = styled.h2`
-  font-family: 'Dancing Script', cursive;
+  font-family: ${({theme}) => theme.font.secondary};
   font-weight: 400;
   font-size: ${({ theme }) => theme.font.h2};
-  color: #fff;
+  color: ${({theme}) => theme.color.white};
   margin: 0;
 `;
 
@@ -26,7 +26,7 @@ const HeaderWrapperStyled = styled.header`
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: #52542c;
+  background-color: ${({theme }) => theme.color.secondary};
   color: ${({ theme }) => theme.color.white};
   margin: 0;
 `;

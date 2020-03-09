@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import GlobalStyle from '../styles/globalStyle'
 import { theme } from '../styles/mainTheme';
 import Footer from '../components/Footer/Footer';
+import PageHeader from '../components/PageHeader/PageHeader';
 
 
 const StyledWrapper = styled.div`
   width: 100%;
   max-width: 1440px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -18,11 +19,12 @@ const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
 `;
 
-const Layout = ({ children }) => (
+const PageLayout = ({ children, title }) => (
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
           <StyledWrapper>
+            <PageHeader title={title}/>
             {children}
             <Footer />
           </StyledWrapper>
@@ -30,8 +32,9 @@ const Layout = ({ children }) => (
       </ThemeProvider>
 );
 
-Layout.propTypes = {
+PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
-export default Layout;
+export default PageLayout;
