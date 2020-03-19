@@ -19,13 +19,20 @@ const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
 `;
 
+const ChildreenWrapper = styled.div`
+  width: 100%;
+  padding: 0 10px;
+`;
+
 const PageLayout = ({ children, title }) => (
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
           <StyledWrapper>
             <PageHeader title={title}/>
-            {children}
+            <ChildreenWrapper>
+              {children}
+            </ChildreenWrapper>
             <Footer />
           </StyledWrapper>
         </>

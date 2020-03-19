@@ -46,13 +46,13 @@ const Navigation = () => (
         <LinkStyled to="/o-nas">O Nas</LinkStyled>
       </NavigationListItem>
       <NavigationListItem>
-        <LinkStyled to="/offer">Oferta</LinkStyled>
+        <LinkStyled to="/oferta">Oferta</LinkStyled>
       </NavigationListItem>
       <NavigationListItem>
-        <LinkStyled to="/gallery">Galeria</LinkStyled>
+        <LinkStyled to="/galeria">Galeria</LinkStyled>
       </NavigationListItem>
       <NavigationListItem>
-        <LinkStyled to="/contact">Kontakt</LinkStyled>
+        <LinkStyled to="/kontakt">Kontakt</LinkStyled>
       </NavigationListItem>
     </NavigationList>
   </NavigationWrapper>

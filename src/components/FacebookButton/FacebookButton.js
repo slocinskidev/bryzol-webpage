@@ -14,8 +14,8 @@ const ButtonWrapper = styled.div`
 
 const IconStyled = styled(Icon)`
   color: ${({ theme }) => theme.color.primary};
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 `;
 
 const FacebookLink = styled.a`
