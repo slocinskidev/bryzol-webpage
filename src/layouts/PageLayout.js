@@ -1,11 +1,10 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
-import GlobalStyle from '../styles/globalStyle'
+import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/mainTheme';
 import Footer from '../components/Footer/Footer';
 import PageHeader from '../components/PageHeader/PageHeader';
-
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -25,18 +24,16 @@ const ChildreenWrapper = styled.div`
 `;
 
 const PageLayout = ({ children, title }) => (
-      <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyle />
-          <StyledWrapper>
-            <PageHeader title={title}/>
-            <ChildreenWrapper>
-              {children}
-            </ChildreenWrapper>
-            <Footer />
-          </StyledWrapper>
-        </>
-      </ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <>
+      <GlobalStyle />
+      <StyledWrapper>
+        <PageHeader title={title} />
+        <ChildreenWrapper>{children}</ChildreenWrapper>
+        <Footer />
+      </StyledWrapper>
+    </>
+  </ThemeProvider>
 );
 
 PageLayout.propTypes = {

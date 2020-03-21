@@ -10,7 +10,7 @@ const AccordionWrapper = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: ${({theme}) => theme.shadow.box};
+  box-shadow: ${({ theme }) => theme.shadow.box};
 `;
 
 const ChevronStyled = styled(Chevron)`
@@ -18,26 +18,26 @@ const ChevronStyled = styled(Chevron)`
   top: 10px;
   right: 10px;
   transform: rotate(90deg);
-  transition: transform .6s ease;
+  transition: transform 0.6s ease;
 
   &.rotate {
     transform: rotate(270deg);
-}
+  }
 `;
 
 const CardHeader = styled.div`
   position: relative;
   width: 100%;
-  background-color: ${({theme}) => theme.color.primary};
+  background-color: ${({ theme }) => theme.color.primary};
 
   &.active {
-    background-color: ${({theme}) => theme.color.secondary};
+    background-color: ${({ theme }) => theme.color.secondary};
   }
 
   h2 {
     font-weight: 500;
     margin: 0 0 10px 10px;
-    color: ${({theme}) => theme.color.white};
+    color: ${({ theme }) => theme.color.white};
   }
 `;
 
@@ -65,36 +65,28 @@ const AccordionText = styled.p`
   font-size: 1.6rem;
 `;
 
-const AboutCard = ({name, content, tel, email}) => {
-  const [setActive, setActiveState] = useState("");
-  const [setHeight, setHeightState] = useState("0px");
-  const [setRotate, setRotateState] = useState("");
-  
+const AboutCard = ({ name, content, tel, email }) => {
+  const [setActive, setActiveState] = useState('');
+  const [setHeight, setHeightState] = useState('0px');
+  const [setRotate, setRotateState] = useState('');
+
   const contentRef = useRef(null);
-  
-    const toggleAccordion = () => {
-      setActiveState(setActive === "" ? "active" : "");
-      setHeightState(
-        setActive === "active" ? "0px" : `${contentRef.current.scrollHeight}px`
-      );
-      setRotateState(
-        setActive === "active" ? "" : "rotate"
-      );
-    }
 
+  const toggleAccordion = () => {
+    setActiveState(setActive === '' ? 'active' : '');
+    setHeightState(setActive === 'active' ? '0px' : `${contentRef.current.scrollHeight}px`);
+    setRotateState(setActive === 'active' ? '' : 'rotate');
+  };
 
-  return(
+  return (
     <AccordionWrapper>
       <CardHeader onClick={toggleAccordion} className={setActive}>
         <Avatar />
-        <ChevronStyled className={`${setRotate}`} width={30} height={30} fill='#fff' />
+        <ChevronStyled className={`${setRotate}`} width={30} height={30} fill="#fff" />
         <h2>{name}</h2>
       </CardHeader>
       <CardContact>
-        <AccordionContent 
-          ref={contentRef}
-          style={{ maxHeight: `${setHeight}` }}
-        >
+        <AccordionContent ref={contentRef} style={{ maxHeight: `${setHeight}` }}>
           <AccordionText>{content}</AccordionText>
           <p>{tel}</p>
           <p>{email}</p>
@@ -109,7 +101,7 @@ AboutCard.propTypes = {
   content: PropTypes.string.isRequired,
   tel: PropTypes.number.isRequired,
   email: PropTypes.string,
-}
+};
 
 AboutCard.defaultProps = {
   email: 'kontakt@bryzol.pl',

@@ -1,12 +1,13 @@
 import React from 'react';
 import MenuLayout from '../layouts/MenuLayout';
-import Header from '../components/Header/Header';
+import HeaderText from '../components/HeaderText/HeaderText';
 import Navigation from '../components/Navigation/Navigation';
 import FacebookButton from '../components/FacebookButton/FacebookButton';
+import Background from '../components/Background/Background';
 
 const IndexPage = () => (
   <MenuLayout>
-    <Header />
+    <HeaderText />
     <FacebookButton />
     <Navigation />
   </MenuLayout>

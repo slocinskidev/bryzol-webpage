@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { theme } from './mainTheme';
-import "./fonts.css"
+import './fonts.css';
 
 const GlobalStyle = createGlobalStyle`
 *, *::before, *::after {
@@ -19,13 +19,13 @@ const GlobalStyle = createGlobalStyle`
     font-weight: ${({ theme }) => theme.font.regular};
     font-size: ${({ theme }) => theme.font.normal};
     background-color: ${({ theme }) => theme.color.grey};
-    font-family: ${({theme}) => theme.font.primary};
+    font-family: ${({ theme }) => theme.font.primary};
   }
 
   button {
     padding: 0;
     cursor: pointer;
-    font-family: ${({theme}) => theme.font.primary};
+    font-family: ${({ theme }) => theme.font.primary};
   }
 
   ul {

@@ -8,7 +8,7 @@ const StyledFooterWrapper = styled.footer`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.color.secondary};
-  height: 6vh;
+  max-height: 40px;
   width: 100%;
 `;
 
