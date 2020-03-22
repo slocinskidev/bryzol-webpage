@@ -1,10 +1,10 @@
-import React from "react"
-import MenuLayout from "../layouts/MenuLayout"
+import React from 'react';
+import DesktopLayout from '../layouts/DesktopLayout';
 
 const NotFoundPage = () => (
-  <MenuLayout>
+  <DesktopLayout>
     <h1>Nie znaleziono strony</h1>
-  </MenuLayout>
-)
+  </DesktopLayout>
+);
 
-export default NotFoundPage
+export default NotFoundPage;

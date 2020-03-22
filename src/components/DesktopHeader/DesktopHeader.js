@@ -30,16 +30,13 @@ const Ribbon = styled.div`
 `;
 
 const TopLine = styled.div`
-  top: 0;
-  left: 0;
-  position: absolute;
+  position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.color.secondary};
   height: 40px;
-  z-index: 1;
 `;
 
-const LogoWrapper = styled.div`
+const Logo = styled.div`
   width: 150px;
   height: 150px;
   background-image: url(${({ image }) => image});
@@ -63,7 +60,7 @@ const DesktopHeader = () => {
       <TopLine />
       <Ribbon>
         <a href="/">
-          <LogoWrapper image={data.file.childImageSharp.fixed.src} />
+          <Logo image={data.file.childImageSharp.fixed.src} />
         </a>
       </Ribbon>
     </>

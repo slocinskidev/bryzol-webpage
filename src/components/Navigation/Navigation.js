@@ -7,7 +7,7 @@ const NavigationWrapper = styled.nav`
   width: 100%;
   height: 100%;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 `;
 
 const NavigationList = styled.ul`

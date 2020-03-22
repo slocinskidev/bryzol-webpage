@@ -1,10 +1,10 @@
 import React from 'react';
-import PageLayout from '../layouts/PageLayout';
+import MobileLayout from '../layouts/MobileLayout';
 
 const GalleryPage = () => (
-  <PageLayout title='Galeria'>
+  <MobileLayout title="Galeria">
     <h2>Galeria</h2>
-  </PageLayout>
+  </MobileLayout>
 );
 
 export default GalleryPage;

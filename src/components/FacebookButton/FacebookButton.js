@@ -6,10 +6,15 @@ import { theme } from '../../styles/mainTheme';
 
 const ButtonWrapper = styled.div`
   margin: 0;
-  padding: 10px 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 10px 0;
+
+  @media (min-width: 992px) {
+    padding: 0 20px 10px 0;
+    justify-content: flex-end;
+  }
 `;
 
 const IconStyled = styled(Icon)`
@@ -19,8 +24,8 @@ const IconStyled = styled(Icon)`
 `;
 
 const FacebookLink = styled.a`
-  font-family: ${({theme}) => theme.font.secondary};
-  color: ${({theme}) => theme.color.primary};
+  font-family: ${({ theme }) => theme.font.secondary};
+  color: ${({ theme }) => theme.color.primary};
   font-size: 2.4rem;
   margin: 0;
   text-decoration: none;
@@ -30,10 +35,10 @@ const FacebookLink = styled.a`
 
 const FacebookButton = () => (
   <ButtonWrapper>
-      <FacebookLink href="https://www.facebook.com/bryzolcatering/">
-        Sprawdź nas na
-        <IconStyled icon={facebookFilled} />
-      </FacebookLink>
+    <FacebookLink href="https://www.facebook.com/bryzolcatering/">
+      Sprawdź nas na
+      <IconStyled icon={facebookFilled} />
+    </FacebookLink>
   </ButtonWrapper>
 );
 

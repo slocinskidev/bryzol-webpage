@@ -1,10 +1,10 @@
 import React from 'react';
-import PageLayout from '../layouts/PageLayout';
+import MobileLayout from '../layouts/MobileLayout';
 
 const OfferPage = () => (
-  <PageLayout title='Oferta'>
+  <MobileLayout title="Oferta">
     <h2>Oferta</h2>
-  </PageLayout>
+  </MobileLayout>
 );
 
 export default OfferPage;

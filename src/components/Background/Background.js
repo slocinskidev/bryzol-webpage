@@ -4,10 +4,15 @@ import Image from 'gatsby-image';
 import styled from 'styled-components';
 
 const StyledImage = styled(Image)`
-  height: 100%;
+  min-height: 250px;
+  height: 35vh;
   width: 100%;
   object-fit: cover;
   object-position: bottom;
+
+  @media (min-height: 1081px) {
+    height: 50vh;
+  }
 `;
 
 const Background = () => {
@@ -15,7 +20,7 @@ const Background = () => {
     {
       file(name: { eq: "header-bg" }) {
         childImageSharp {
-          fluid(maxWidth: 1440, quality: 100, maxHeight: 400) {
+          fluid(maxWidth: 1440, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }

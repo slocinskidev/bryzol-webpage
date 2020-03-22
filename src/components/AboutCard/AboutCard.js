@@ -5,9 +5,9 @@ import Chevron from '../Chevron/Chevron';
 
 import { theme } from '../../styles/mainTheme';
 
-const AccordionWrapper = styled.section`
-  margin-bottom: 20px;
-  width: 100%;
+const StyledWrapper = styled.section`
+  margin: 0 auto 20px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   box-shadow: ${({ theme }) => theme.shadow.box};
@@ -25,7 +25,7 @@ const ChevronStyled = styled(Chevron)`
   }
 `;
 
-const CardHeader = styled.div`
+const StyledCardHeader = styled.div`
   position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.color.primary};
@@ -49,7 +49,7 @@ const Avatar = styled.div`
   border: 2px solid white;
 `;
 
-const CardContact = styled.div`
+const StyledCardContact = styled.div`
   display: grid;
 `;
 
@@ -57,7 +57,7 @@ const AccordionContent = styled.div`
   padding: 0 10px;
   width: 100%;
   background-color: white;
-  overflow: auto;
+  overflow: hidden;
   transition: max-height 0.6s ease;
 `;
 
@@ -79,20 +79,20 @@ const AboutCard = ({ name, content, tel, email }) => {
   };
 
   return (
-    <AccordionWrapper>
-      <CardHeader onClick={toggleAccordion} className={setActive}>
+    <StyledWrapper>
+      <StyledCardHeader onClick={toggleAccordion} className={setActive}>
         <Avatar />
         <ChevronStyled className={`${setRotate}`} width={30} height={30} fill="#fff" />
         <h2>{name}</h2>
-      </CardHeader>
-      <CardContact>
+      </StyledCardHeader>
+      <StyledCardContact>
+        <p>{tel}</p>
+        <p>{email}</p>
         <AccordionContent ref={contentRef} style={{ maxHeight: `${setHeight}` }}>
           <AccordionText>{content}</AccordionText>
-          <p>{tel}</p>
-          <p>{email}</p>
         </AccordionContent>
-      </CardContact>
-    </AccordionWrapper>
+      </StyledCardContact>
+    </StyledWrapper>
   );
 };
 

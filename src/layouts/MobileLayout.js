@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/mainTheme';
 import Footer from '../components/Footer/Footer';
-import PageHeader from '../components/PageHeader/PageHeader';
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -20,15 +19,13 @@ const StyledWrapper = styled.div`
 
 const ChildreenWrapper = styled.div`
   width: 100%;
-  padding: 0 10px;
 `;
 
-const PageLayout = ({ children, title }) => (
+const MobileLayout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
       <StyledWrapper>
-        <PageHeader title={title} />
         <ChildreenWrapper>{children}</ChildreenWrapper>
         <Footer />
       </StyledWrapper>
@@ -36,9 +33,8 @@ const PageLayout = ({ children, title }) => (
   </ThemeProvider>
 );
 
-PageLayout.propTypes = {
+MobileLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
 };
 
-export default PageLayout;
+export default MobileLayout;
