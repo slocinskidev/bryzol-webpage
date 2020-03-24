@@ -4,7 +4,7 @@ import MainPageMobileLayout from '../layouts/MainPageMobileLayout';
 import DesktopLayout from '../layouts/DesktopLayout';
 import HeaderText from '../components/HeaderText/HeaderText';
 import Navigation from '../components/Navigation/Navigation';
-import FacebookButton from '../components/FacebookButton/FacebookButton';
+import FacebookButton from '../components/FollowFacebookButton/FollowFacebookButton';
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });

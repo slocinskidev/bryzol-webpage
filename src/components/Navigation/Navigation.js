@@ -38,11 +38,6 @@ const LinkStyled = styled(Link)`
   color: ${({ theme }) => theme.color.white};
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.shadow.box};
-
-  @media (min-width: 992px) {
-    width: 20%;
-    margin: 5px auto;
-  }
 `;
 
 const Navigation = () => (

@@ -26,6 +26,7 @@ const ChevronStyled = styled(Chevron)`
 `;
 
 const StyledCardHeader = styled.div`
+  cursor: pointer;
   position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.color.primary};

@@ -7,15 +7,14 @@ import Footer from '../components/Footer/Footer';
 
 const StyledWrapper = styled.div`
   width: 100%;
-  max-width: 1440px;
+  width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  align-content: space-between;
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: ${({ theme }) => theme.shadow.box};
+  grid-template-rows: 1fr auto;
 `;
 
 const MainPageMobileLayout = ({ children }) => (

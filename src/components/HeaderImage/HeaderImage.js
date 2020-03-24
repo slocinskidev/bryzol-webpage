@@ -15,13 +15,13 @@ const StyledImage = styled(Image)`
   }
 `;
 
-const Background = () => {
+const HeaderImage = () => {
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "header-bg" }) {
         childImageSharp {
           fluid(maxWidth: 1440, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -31,4 +31,4 @@ const Background = () => {
   return <StyledImage fluid={data.file.childImageSharp.fluid} alt="Bryzol Catering Logo" />;
 };
 
-export default Background;
+export default HeaderImage;

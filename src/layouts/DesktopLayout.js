@@ -5,45 +5,53 @@ import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/mainTheme';
 import Footer from '../components/Footer/Footer';
 import DesktopHeader from '../components/DesktopHeader/DesktopHeader';
-import Background from '../components/Background/Background';
+import Background from '../components/HeaderImage/HeaderImage';
 
-const DesktopContentStyled = styled.div`
+const StyledContentWrapper = styled.main`
   width: 100%;
+  height: 100%;
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: auto auto;
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: ${({ theme }) => theme.shadow.box};
 `;
 
-const DesktopWrapper = styled.div`
+const StyledWrapper = styled.section`
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: 40px auto 40px;
-
+  grid-template-rows: auto 1fr auto;
   grid-row-gap: 20px;
 `;
 
-const MenuLayout = ({ children }) => (
+const StyledPaddingWrapper = styled.div`
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  width: 100%;
+`;
+
+const DesktopLayout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
-      <DesktopWrapper>
+      <StyledWrapper>
         <DesktopHeader />
-        <DesktopContentStyled>
-          <Background />
-          {children}
-        </DesktopContentStyled>
+        <StyledPaddingWrapper>
+          <StyledContentWrapper>
+            <Background />
+            {children}
+          </StyledContentWrapper>
+        </StyledPaddingWrapper>
         <Footer />
-      </DesktopWrapper>
+      </StyledWrapper>
     </>
   </ThemeProvider>
 );
 
-MenuLayout.propTypes = {
+DesktopLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default MenuLayout;
+export default DesktopLayout;

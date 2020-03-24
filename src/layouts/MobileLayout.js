@@ -5,7 +5,7 @@ import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/mainTheme';
 import Footer from '../components/Footer/Footer';
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.section`
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
@@ -17,8 +17,10 @@ const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
 `;
 
-const ChildreenWrapper = styled.div`
+const StyledContentWrapper = styled.main`
+  height: 100%;
   width: 100%;
+  padding: 0 10px;
 `;
 
 const MobileLayout = ({ children }) => (
@@ -26,7 +28,7 @@ const MobileLayout = ({ children }) => (
     <>
       <GlobalStyle />
       <StyledWrapper>
-        <ChildreenWrapper>{children}</ChildreenWrapper>
+        <StyledContentWrapper>{children}</StyledContentWrapper>
         <Footer />
       </StyledWrapper>
     </>

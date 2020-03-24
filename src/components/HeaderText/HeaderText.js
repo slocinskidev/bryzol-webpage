@@ -10,7 +10,7 @@ const Mobile = ({ children }) => {
   return isMobile ? children : null;
 };
 
-const HeaderTitleStyled = styled.h2`
+const StyledTitle = styled.h2`
   font-family: ${({ theme }) => theme.font.secondary};
   font-weight: 400;
   font-size: ${({ theme }) => theme.font.h2};
@@ -22,7 +22,7 @@ const HeaderTitleStyled = styled.h2`
   }
 `;
 
-const HeaderSubtitleStyled = styled.p`
+const StyledSubtitle = styled.p`
   text-align: center;
   padding: 10px;
   margin: 0;
@@ -31,7 +31,7 @@ const HeaderSubtitleStyled = styled.p`
   max-width: 650px;
 `;
 
-const Wrapper = styled.header`
+const StyledWrapper = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,18 +48,18 @@ const Wrapper = styled.header`
 `;
 
 const HeaderText = () => (
-  <Wrapper>
+  <StyledWrapper>
     <Mobile>
       <MobileHeader />
     </Mobile>
-    <HeaderTitleStyled>Mania Gotowania</HeaderTitleStyled>
-    <HeaderSubtitleStyled>
+    <StyledTitle>Mania Gotowania</StyledTitle>
+    <StyledSubtitle>
       Bryzol Catering to firma oferująca usługi cateringu zarówno słonego, jak i słodkiego. Wszelkie
       oferty tworzone są pod potrzeby Klienta. Firmę stworzyli dwaj pasjonaci. Jeden lubuje się w
       gotowaniu i tworzeniu nowoczesnych w formie dań ze znanych nam klasyków. Drugi za to wymyśla
       grzechu warte desery i torty.
-    </HeaderSubtitleStyled>
-  </Wrapper>
+    </StyledSubtitle>
+  </StyledWrapper>
 );
 
 export default HeaderText;
