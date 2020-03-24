@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import { theme } from '../../styles/mainTheme';
 
 const HeaderWrapper = styled.header`
-  padding: 40px 20px;
   display: flex;
   width: 100%;
   min-height: 10vh;
@@ -27,8 +26,8 @@ const TextWrapper = styled.div`
 `;
 
 const HeaderTitle = styled.h2`
-  font-size: ${({theme}) => theme.font.h2};
-  color: ${({theme}) => theme.color.secondary};
+  font-size: ${({ theme }) => theme.font.h2};
+  color: ${({ theme }) => theme.color.secondary};
   font-weight: 500;
   margin: 0;
   padding: 0;
@@ -39,12 +38,12 @@ const HeaderSubtitle = styled.span`
   margin: 0;
   padding: 0;
   font-size: 12px;
-  color: ${({theme}) => theme.color.secondary};
+  color: ${({ theme }) => theme.color.secondary};
 `;
 
-const PageHeader = ({title}) => (
+const PageHeader = ({ title }) => (
   <HeaderWrapper>
-    <Link to='/'>
+    <Link to="/">
       <IconStyled icon={bxArrowBack} />
     </Link>
     <TextWrapper>

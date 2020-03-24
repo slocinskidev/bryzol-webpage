@@ -20,7 +20,7 @@ const StyledWrapper = styled.section`
 const StyledContentWrapper = styled.main`
   height: 100%;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
 `;
 
 const MobileLayout = ({ children }) => (

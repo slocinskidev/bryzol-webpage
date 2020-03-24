@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -6,7 +7,8 @@ import Chevron from '../Chevron/Chevron';
 import { theme } from '../../styles/mainTheme';
 
 const StyledWrapper = styled.section`
-  margin: 0 auto 20px;
+  margin: 10px;
+  width: 100%;
   max-width: 500px;
   display: flex;
   flex-direction: column;
@@ -42,12 +44,13 @@ const StyledCardHeader = styled.div`
   }
 `;
 
-const Avatar = styled.div`
+const StyledAvatarWrapper = styled.img`
   margin: 10px 0 10px 10px;
   width: 100px;
   height: 100px;
-  background-color: black;
+  background-image: url(${({ avatar }) => avatar});
   border: 2px solid white;
+  background-size: cover;
 `;
 
 const StyledCardContact = styled.div`
@@ -66,7 +69,7 @@ const AccordionText = styled.p`
   font-size: 1.6rem;
 `;
 
-const AboutCard = ({ name, content, tel, email }) => {
+const AboutCard = ({ name, content, avatar }) => {
   const [setActive, setActiveState] = useState('');
   const [setHeight, setHeightState] = useState('0px');
   const [setRotate, setRotateState] = useState('');
@@ -82,13 +85,11 @@ const AboutCard = ({ name, content, tel, email }) => {
   return (
     <StyledWrapper>
       <StyledCardHeader onClick={toggleAccordion} className={setActive}>
-        <Avatar />
         <ChevronStyled className={`${setRotate}`} width={30} height={30} fill="#fff" />
+        <StyledAvatarWrapper avatar={avatar} />
         <h2>{name}</h2>
       </StyledCardHeader>
       <StyledCardContact>
-        <p>{tel}</p>
-        <p>{email}</p>
         <AccordionContent ref={contentRef} style={{ maxHeight: `${setHeight}` }}>
           <AccordionText>{content}</AccordionText>
         </AccordionContent>
@@ -100,12 +101,6 @@ const AboutCard = ({ name, content, tel, email }) => {
 AboutCard.propTypes = {
   name: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  tel: PropTypes.number.isRequired,
-  email: PropTypes.string,
-};
-
-AboutCard.defaultProps = {
-  email: 'kontakt@bryzol.pl',
 };
 
 export default AboutCard;
