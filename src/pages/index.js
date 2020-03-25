@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import MainPageMobileLayout from '../layouts/MainPageMobileLayout';
-import DesktopLayout from '../layouts/DesktopLayout';
+import Layout from '../layouts/Layout';
 import HeaderText from '../components/HeaderText/HeaderText';
 import Navigation from '../components/Navigation/Navigation';
 import FacebookButton from '../components/FollowFacebookButton/FollowFacebookButton';
@@ -26,11 +26,11 @@ const IndexPage = () => (
       </MainPageMobileLayout>
     </Mobile>
     <Desktop>
-      <DesktopLayout>
+      <Layout>
         <HeaderText />
         <Navigation />
         <FacebookButton />
-      </DesktopLayout>
+      </Layout>
     </Desktop>
   </>
 );

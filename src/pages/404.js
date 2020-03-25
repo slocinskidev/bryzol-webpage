@@ -1,10 +1,10 @@
 import React from 'react';
-import DesktopLayout from '../layouts/DesktopLayout';
+import Layout from '../layouts/Layout';
 
 const NotFoundPage = () => (
-  <DesktopLayout>
+  <Layout>
     <h1>Nie znaleziono strony</h1>
-  </DesktopLayout>
+  </Layout>
 );
 
 export default NotFoundPage;

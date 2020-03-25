@@ -4,6 +4,7 @@
     "linebreak-style": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "no-shadow": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "react/prop-types": 0
   }
 }
