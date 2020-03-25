@@ -17,11 +17,6 @@ const StyledWrapper = styled.div`
 
 const StyledPageHeaderWrapper = styled.div`
   padding: 20px 0 40px;
-  max-width: 500px;
-
-  @media (min-width: 992px) {
-    max-width: 400px;
-  }
 `;
 
 const StyledAboutCardWrapper = styled.div`

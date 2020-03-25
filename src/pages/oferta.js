@@ -18,11 +18,6 @@ const StyledWrapper = styled.div`
 
 const StyledPageHeaderWrapper = styled.div`
   padding: 20px 0 40px;
-  max-width: 500px;
-
-  @media (min-width: 501px) {
-    max-width: 300px;
-  }
 `;
 
 const StyledContentWrapper = styled.div`

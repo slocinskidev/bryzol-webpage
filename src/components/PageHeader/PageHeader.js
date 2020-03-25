@@ -41,20 +41,25 @@ const HeaderSubtitle = styled.span`
   color: ${({ theme }) => theme.color.secondary};
 `;
 
-const PageHeader = ({ title }) => (
+const PageHeader = ({ title, subtitle }) => (
   <HeaderWrapper>
     <Link to="/">
       <IconStyled icon={bxArrowBack} />
     </Link>
     <TextWrapper>
       <HeaderTitle>{title}</HeaderTitle>
-      <HeaderSubtitle>Kliknij by wyświetlić szczegóły</HeaderSubtitle>
+      <HeaderSubtitle>{subtitle}</HeaderSubtitle>
     </TextWrapper>
   </HeaderWrapper>
 );
 
 PageHeader.propTypes = {
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+};
+
+PageHeader.defaultProps = {
+  subtitle: 'Kliknij by wyświetlić szczegóły',
 };
 
 export default PageHeader;
