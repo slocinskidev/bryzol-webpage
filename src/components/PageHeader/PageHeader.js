@@ -43,7 +43,7 @@ const HeaderSubtitle = styled.span`
 
 const PageHeader = ({ title, subtitle }) => (
   <HeaderWrapper>
-    <AniLink to="/" paintDrip hex="#52542C" duration={0.8} direction="left">
+    <AniLink to="/" paintDrip hex="#52542C" duration={0.5}>
       <IconStyled icon={bxArrowBack} />
     </AniLink>
     <TextWrapper>
@@ -59,7 +59,7 @@ PageHeader.propTypes = {
 };
 
 PageHeader.defaultProps = {
-  subtitle: 'Kliknij by wyświetlić szczegóły',
+  subtitle: '',
 };
 
 export default PageHeader;

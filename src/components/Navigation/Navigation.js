@@ -60,29 +60,29 @@ const Navigation = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(!visible);
-    }, 1200);
+    }, 600);
     return () => clearTimeout(timer);
   }, []);
   return (
     <NavigationWrapper>
       <NavigationList pose={visible ? 'visible' : 'hidden'}>
         <NavigationListItem>
-          <LinkStyled to="/o-nas" paintDrip hex="#52542C">
+          <LinkStyled to="/o-nas" paintDrip duration={0.5} hex="#52542C">
             O Nas
           </LinkStyled>
         </NavigationListItem>
         <NavigationListItem>
-          <LinkStyled to="/oferta" paintDrip hex="#52542C">
+          <LinkStyled to="/oferta" paintDrip duration={0.5} hex="#52542C">
             Oferta
           </LinkStyled>
         </NavigationListItem>
         <NavigationListItem>
-          <LinkStyled to="/galeria" paintDrip hex="#52542C">
+          <LinkStyled to="/galeria" paintDrip duration={0.5} hex="#52542C">
             Galeria
           </LinkStyled>
         </NavigationListItem>
         <NavigationListItem>
-          <LinkStyled to="/kontakt" paintDrip hex="#52542C">
+          <LinkStyled to="/kontakt" paintDrip duration={0.5} hex="#52542C">
             Kontakt
           </LinkStyled>
         </NavigationListItem>
