@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
@@ -46,10 +45,7 @@ const StyledImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  @media (min-width: 992px) {
-    width: 30vw;
-  }
+  margin: 0 auto;
 `;
 
 const OfferPage = ({ data }) => (
@@ -61,7 +57,7 @@ const OfferPage = ({ data }) => (
       <StyledContentWrapper>
         <StyledText>Strona w budowie</StyledText>
         <StyledTextMore>Pozostało do wbicia jeszcze kilka gwoździ...</StyledTextMore>
-        <StyledImage fluid={data.file.childImageSharp.fluid} />
+        <StyledImage fluid={data.file.childImageSharp.fluid} alt="Zdjęcie przedstawiające budowę" />
       </StyledContentWrapper>
     </StyledWrapper>
   </Layout>

@@ -45,6 +45,7 @@ const StyledImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin: 0 auto;
 `;
 
 const NotFoundPage = ({ data }) => (
@@ -59,7 +60,10 @@ const NotFoundPage = ({ data }) => (
           Strona której szukasz nie istnieje lub została już usunięta...
         </StyledTextMore>
         <StyledTextMore>...a może została zjedzona?</StyledTextMore>
-        <StyledImage fluid={data.file.childImageSharp.fluid} />
+        <StyledImage
+          fluid={data.file.childImageSharp.fluid}
+          alt="Zdjęcie przedstawiające błąd 404"
+        />
       </StyledContentWrapper>
     </StyledWrapper>
   </Layout>
