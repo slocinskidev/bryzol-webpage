@@ -60,7 +60,7 @@ const Navigation = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(!visible);
-    }, 500);
+    }, 1200);
     return () => clearTimeout(timer);
   }, []);
   return (
