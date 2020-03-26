@@ -1,7 +1,21 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React, { useState, useEffect } from 'react';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import posed from 'react-pose';
 import styled from 'styled-components';
 import { theme } from '../../styles/mainTheme';
+
+// Pose
+const PosedNavigationList = posed.ul({
+  visible: {
+    delayChildren: 50,
+    staggerChildren: 100,
+  },
+});
+
+const PosedNavigationListItem = posed.li({
+  visible: { y: 0, opacity: 1 },
+  hidden: { y: '-50%', opacity: 0 },
+});
 
 const NavigationWrapper = styled.nav`
   width: 100%;
@@ -10,7 +24,7 @@ const NavigationWrapper = styled.nav`
   padding-bottom: 10px;
 `;
 
-const NavigationList = styled.ul`
+const NavigationList = styled(PosedNavigationList)`
   width: 100%;
   margin: 0;
   padding: 0;
@@ -19,12 +33,12 @@ const NavigationList = styled.ul`
   flex-direction: column;
 `;
 
-const NavigationListItem = styled.li`
+const NavigationListItem = styled(PosedNavigationListItem)`
   width: 100%;
   margin: 0;
 `;
 
-const LinkStyled = styled(Link)`
+const LinkStyled = styled(AniLink)`
   background-color: ${({ theme }) => theme.color.primary};
   padding: 10px 0;
   margin: 10px auto;
@@ -40,23 +54,41 @@ const LinkStyled = styled(Link)`
   box-shadow: ${({ theme }) => theme.shadow.box};
 `;
 
-const Navigation = () => (
-  <NavigationWrapper>
-    <NavigationList>
-      <NavigationListItem>
-        <LinkStyled to="/o-nas">O Nas</LinkStyled>
-      </NavigationListItem>
-      <NavigationListItem>
-        <LinkStyled to="/oferta">Oferta</LinkStyled>
-      </NavigationListItem>
-      <NavigationListItem>
-        <LinkStyled to="/galeria">Galeria</LinkStyled>
-      </NavigationListItem>
-      <NavigationListItem>
-        <LinkStyled to="/kontakt">Kontakt</LinkStyled>
-      </NavigationListItem>
-    </NavigationList>
-  </NavigationWrapper>
-);
+const Navigation = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(!visible);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+  return (
+    <NavigationWrapper>
+      <NavigationList pose={visible ? 'visible' : 'hidden'}>
+        <NavigationListItem>
+          <LinkStyled to="/o-nas" paintDrip hex="#52542C">
+            O Nas
+          </LinkStyled>
+        </NavigationListItem>
+        <NavigationListItem>
+          <LinkStyled to="/oferta" paintDrip hex="#52542C">
+            Oferta
+          </LinkStyled>
+        </NavigationListItem>
+        <NavigationListItem>
+          <LinkStyled to="/galeria" paintDrip hex="#52542C">
+            Galeria
+          </LinkStyled>
+        </NavigationListItem>
+        <NavigationListItem>
+          <LinkStyled to="/kontakt" paintDrip hex="#52542C">
+            Kontakt
+          </LinkStyled>
+        </NavigationListItem>
+      </NavigationList>
+    </NavigationWrapper>
+  );
+};
 
 export default Navigation;

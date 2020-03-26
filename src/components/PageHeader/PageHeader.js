@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import bxArrowBack from '@iconify/icons-bx/bx-arrow-back';
 import { Icon } from '@iconify/react';
 import PropTypes from 'prop-types';
@@ -43,9 +43,9 @@ const HeaderSubtitle = styled.span`
 
 const PageHeader = ({ title, subtitle }) => (
   <HeaderWrapper>
-    <Link to="/">
+    <AniLink to="/" paintDrip hex="#52542C" duration={0.8} direction="left">
       <IconStyled icon={bxArrowBack} />
-    </Link>
+    </AniLink>
     <TextWrapper>
       <HeaderTitle>{title}</HeaderTitle>
       <HeaderSubtitle>{subtitle}</HeaderSubtitle>
