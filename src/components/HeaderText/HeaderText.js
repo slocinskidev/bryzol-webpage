@@ -100,7 +100,7 @@ const HeaderText = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(!visible);
-    }, 1000);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 

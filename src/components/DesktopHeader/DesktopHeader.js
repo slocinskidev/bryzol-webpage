@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import posed from 'react-pose';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { theme } from '../../styles/mainTheme';
 
-const Ribbon = styled.div`
+const PosedRibbon = posed.div({
+  visible: {
+    opacity: 1,
+  },
+  hidden: {
+    opacity: 0,
+  },
+});
+
+const Ribbon = styled(PosedRibbon)`
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -55,10 +65,19 @@ const DesktopHeader = () => {
     }
   `);
 
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(!visible);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <TopLine />
-      <Ribbon>
+      <Ribbon pose={visible ? 'visible' : 'hidden'}>
         <a href="/">
           <Logo image={data.file.childImageSharp.fixed.src} />
         </a>

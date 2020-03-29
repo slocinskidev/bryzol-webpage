@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
+import posed from 'react-pose';
 import styled from 'styled-components';
 import Layout from '../layouts/Layout';
 import PageHeader from '../components/PageHeader/PageHeader';
 import ContactCard from '../components/ContactCard/ContactCard';
+
+// Pose
+const PosedPageHeaderWrapper = posed.div({
+  visible: {
+    x: 0,
+    opacity: 1,
+  },
+  hidden: {
+    x: '-150%',
+    opacity: 0,
+  },
+});
+
+const PosedContentWrapper = posed.div({
+  visible: {
+    delay: 500,
+    opacity: 1,
+  },
+  hidden: {
+    opacity: 0,
+  },
+});
+
+// Style
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -15,17 +40,16 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const StyledPageHeaderWrapper = styled.div`
+const StyledPageHeaderWrapper = styled(PosedPageHeaderWrapper)`
   padding: 20px 0 40px;
 `;
 
-const StyledContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const StyledContentWrapper = styled(PosedContentWrapper)`
   width: 100%;
   height: 100%;
+  display: grid;
+  text-align: center;
+  align-items: center;
 
   @media (min-width: 992px) {
     flex-direction: row;
