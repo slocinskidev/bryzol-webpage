@@ -14,6 +14,7 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   box-shadow: ${({ theme }) => theme.shadow.box};
+  margin: 10px;
 `;
 
 const StyledHeaderWrapper = styled.div`
@@ -43,12 +44,13 @@ const StyledAvatarWrapper = styled.img`
 `;
 
 const StyledName = styled.h3`
-  margin-left: 10px;
+  margin: 0 0 0 20px;
   font-size: ${({ theme }) => theme.font.h4};
   font-weight: 500;
   color: ${({ theme }) => theme.color.white};
   grid-area: name;
   align-self: center;
+  text-align: left;
 
   @media (min-width: 501px) {
     font-size: ${({ theme }) => theme.font.h3};

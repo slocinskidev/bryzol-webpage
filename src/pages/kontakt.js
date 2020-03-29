@@ -47,9 +47,10 @@ const StyledPageHeaderWrapper = styled(PosedPageHeaderWrapper)`
 const StyledContentWrapper = styled(PosedContentWrapper)`
   width: 100%;
   height: 100%;
-  display: grid;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   @media (min-width: 992px) {
     flex-direction: row;
@@ -67,6 +68,12 @@ const ContactPage = ({ data }) => (
           name="Andrzej Słociński"
           avatar={data.allFile.nodes[0].childImageSharp.fluid.src}
           tel="605 547 282"
+          email="slone@bryzol.pl"
+        />
+        <ContactCard
+          name="Adam Gembalczyk"
+          avatar={data.allFile.nodes[1].childImageSharp.fluid.src}
+          tel="502 315 715"
           email="slodkie@bryzol.pl"
         />
       </StyledContentWrapper>
