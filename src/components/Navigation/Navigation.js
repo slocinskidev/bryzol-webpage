@@ -52,6 +52,13 @@ const LinkStyled = styled(AniLink)`
   color: ${({ theme }) => theme.color.white};
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.shadow.box};
+
+  &:hover,
+  &:active,
+  &:hover svg,
+  &:active svg {
+    background-color: ${({ theme }) => theme.color.secondary};
+  }
 `;
 
 const Navigation = () => {

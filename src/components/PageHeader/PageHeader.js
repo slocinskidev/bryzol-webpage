@@ -16,9 +16,16 @@ const HeaderWrapper = styled.header`
 `;
 
 const IconStyled = styled(Icon)`
-  color: ${({ theme }) => theme.color.secondary};
+  color: ${({ theme }) => theme.color.primary};
   width: 50px;
   height: 50px;
+
+  &:hover,
+  &:active,
+  &:hover svg,
+  &:active svg {
+    color: ${({ theme }) => theme.color.secondary};
+  }
 `;
 
 const TextWrapper = styled.div`

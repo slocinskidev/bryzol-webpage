@@ -43,6 +43,13 @@ const FacebookLink = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:active,
+  &:hover svg,
+  &:active svg {
+    color: ${({ theme }) => theme.color.secondary};
+  }
 `;
 
 const FacebookButton = () => {
