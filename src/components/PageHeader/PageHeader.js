@@ -39,6 +39,10 @@ const HeaderSubtitle = styled.span`
   padding: 0;
   font-size: 12px;
   color: ${({ theme }) => theme.color.secondary};
+
+  @media (min-width: 992px) {
+    font-size: 14px;
+  }
 `;
 
 const PageHeader = ({ title, subtitle }) => (

@@ -62,7 +62,7 @@ const StyledAvatarWrapper = styled.img`
   }
 `;
 
-const StyledCardContact = styled.div`
+const StyledCardContent = styled.div`
   display: grid;
 `;
 
@@ -140,12 +140,12 @@ const AboutCard = ({ avatar, name, more, content }) => {
         <StyledName>{name}</StyledName>
         <StyledNameMore>{more}</StyledNameMore>
       </StyledCardHeader>
-      <StyledCardContact>
+      <StyledCardContent>
         <AccordionContent ref={contentRef} style={{ maxHeight: `${setHeight}` }}>
           <AccordionText>{content}</AccordionText>
           <Signature>Podpis</Signature>
         </AccordionContent>
-      </StyledCardContact>
+      </StyledCardContent>
     </StyledWrapper>
   );
 };

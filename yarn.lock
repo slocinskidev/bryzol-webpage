@@ -972,6 +972,16 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-bx/-/icons-bx-1.0.1.tgz#8401e6915ffa0a35c04b3ba3199b1709ff2e91c4"
   integrity sha512-vxEz3niHjxEKCuGcXWakysVknQKtxCYjSrnTjvR3M78iw3O+vdSKZ0nxsGSIT7LswYVwigbgCkljpjcHqfK3tw==
 
+"@iconify/icons-foundation@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-foundation/-/icons-foundation-1.0.3.tgz#c61a27174fcff2f53653d88eda30ec9695f84ca9"
+  integrity sha512-M8J+uu4HAhTpfUKuyZFt1TVbu7iJ8fpUyXeZxb8saKJ1eQLhjhc5AnI5bMKIyKXqxiaqCZ4kGMl+EmDG5So2/A==
+
+"@iconify/icons-ic@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.0.9.tgz#82874c908ed10b03011640d71b7f859a11b938fd"
+  integrity sha512-Vc/PJPeHkDx527mKTTRNSZJWOHfX/OMpi/qr+0YBJwz76TxANV8RQH3I2n4c50JbahdgEzflf66nnc9HO/2vwQ==
+
 "@iconify/react@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@iconify/react/-/react-1.1.3.tgz#ebe4d3e5f5dea23cd6a9634acd7a0a25c7414a59"
