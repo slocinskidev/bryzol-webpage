@@ -1,9 +1,9 @@
-/* eslint-disable no-alert */
-/* eslint-disable no-undef */
 import React from 'react';
 import styled from 'styled-components';
 import { Formik } from 'formik';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const StyledWrapper = styled.section`
   width: 100%;
@@ -61,6 +61,7 @@ const StyledError = styled.p`
 
 const ContactForm = () => (
   <StyledWrapper>
+    <ToastContainer autoClose={3000} position={toast.POSITION.TOP_CENTER} />
     <StyledHeading>Formularz kontaktowy</StyledHeading>
     <Formik
       initialValues={{ name: '', email: '', message: '' }}
@@ -80,18 +81,19 @@ const ContactForm = () => (
         }
         return errors;
       }}
-      onSubmit={(values, { setSubmitting }) => {
+      onSubmit={(values, { setSubmitting, resetForm }) => {
         axios
           .post(
             'https://us-central1-bryzol-webpage-contact-f-971f1.cloudfunctions.net/sendEmail',
             values,
           )
           .then(res => {
-            console.log(res);
+            toast.success('Mail został wysłany pomyślnie');
+            resetForm();
             setSubmitting(false);
           })
           .catch(err => {
-            console.log(err);
+            toast.error('Nie udało się wysłać maila');
             setSubmitting(false);
           });
       }}
