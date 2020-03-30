@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-undef */
 import React from 'react';
-import styled, { ThemeConsumer } from 'styled-components';
+import styled from 'styled-components';
 import { Formik } from 'formik';
 import axios from 'axios';
 
@@ -81,10 +81,19 @@ const ContactForm = () => (
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+        axios
+          .post(
+            'https://us-central1-bryzol-webpage-contact-f-971f1.cloudfunctions.net/sendEmail',
+            values,
+          )
+          .then(res => {
+            console.log(res);
+            setSubmitting(false);
+          })
+          .catch(err => {
+            console.log(err);
+            setSubmitting(false);
+          });
       }}
     >
       {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
@@ -120,7 +129,9 @@ const ContactForm = () => (
             value={values.message}
           />
           <StyledError>{errors.message && touched.message && errors.message}</StyledError>
-          <Button disabled={isSubmitting}>Wyślij</Button>
+          <Button type="submit" disabled={isSubmitting}>
+            Wyślij
+          </Button>
         </StyledForm>
       )}
     </Formik>
