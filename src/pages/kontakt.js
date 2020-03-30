@@ -7,6 +7,7 @@ import PageHeader from '../components/PageHeader/PageHeader';
 import ContactCard from '../components/ContactCard/ContactCard';
 import AddressSection from '../components/AddressSection/AddressSection';
 import Map from '../components/Map/Map';
+import ContactForm from '../components/ContactForm/ContactForm';
 
 // Pose
 const PosedPageHeaderWrapper = posed.div({
@@ -66,32 +67,44 @@ const StyledAddressHeading = styled.h4`
   font-weight: 500;
 `;
 
-const ContactPage = ({ data }) => (
-  <Layout>
-    <StyledWrapper>
-      <StyledPageHeaderWrapper>
-        <PageHeader title="Kontakt" subtitle="Zadzwoń, napisz lub skorzystaj z formularza" />
-      </StyledPageHeaderWrapper>
-      <StyledContentWrapper>
-        <ContactCard
-          name="Andrzej Słociński"
-          avatar={data.allFile.nodes[0].childImageSharp.fluid.src}
-          tel="605 547 282"
-          email="slone@bryzol.pl"
-        />
-        <ContactCard
-          name="Adam Gembalczyk"
-          avatar={data.allFile.nodes[1].childImageSharp.fluid.src}
-          tel="502 315 715"
-          email="slodkie@bryzol.pl"
-        />
-      </StyledContentWrapper>
-      <StyledAddressHeading>Nasz adres</StyledAddressHeading>
-      <AddressSection />
-      <Map />
-    </StyledWrapper>
-  </Layout>
-);
+const ContactPage = ({ data }) => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(!visible);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <Layout>
+      <StyledWrapper>
+        <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
+          <PageHeader title="Kontakt" subtitle="Zadzwoń, napisz lub skorzystaj z formularza" />
+        </StyledPageHeaderWrapper>
+        <StyledContentWrapper>
+          <ContactCard
+            name="Andrzej Słociński"
+            avatar={data.allFile.nodes[0].childImageSharp.fluid.src}
+            tel="605 547 282"
+            email="slone@bryzol.pl"
+          />
+          <ContactCard
+            name="Adam Gembalczyk"
+            avatar={data.allFile.nodes[1].childImageSharp.fluid.src}
+            tel="502 315 715"
+            email="slodkie@bryzol.pl"
+          />
+        </StyledContentWrapper>
+        <StyledAddressHeading>Nasz adres</StyledAddressHeading>
+        <AddressSection />
+        <Map />
+        <ContactForm />
+      </StyledWrapper>
+    </Layout>
+  );
+};
 
 export const query = graphql`
   {

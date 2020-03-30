@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const StyledWrapper = styled.section`
   width: 100%;
-  height: 500px;
-  margin: 0 0 30px;
+  /* height: 500px; */
+  /* margin: 0 0 60px; */
 `;
 
 const Map = () => {
