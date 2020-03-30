@@ -44,7 +44,7 @@ const StyledAvatarWrapper = styled.img`
 `;
 
 const StyledName = styled.h3`
-  margin: 0 0 0 20px;
+  margin: 0 0 10px 20px;
   font-size: ${({ theme }) => theme.font.h4};
   font-weight: 500;
   color: ${({ theme }) => theme.color.white};
@@ -54,6 +54,7 @@ const StyledName = styled.h3`
 
   @media (min-width: 501px) {
     font-size: ${({ theme }) => theme.font.h3};
+    margin: 0 0 0 20px;
   }
 `;
 

@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Layout from '../layouts/Layout';
 import PageHeader from '../components/PageHeader/PageHeader';
 import ContactCard from '../components/ContactCard/ContactCard';
+import AddressSection from '../components/AddressSection/AddressSection';
+import Map from '../components/Map/Map';
 
 // Pose
 const PosedPageHeaderWrapper = posed.div({
@@ -57,6 +59,13 @@ const StyledContentWrapper = styled(PosedContentWrapper)`
   }
 `;
 
+const StyledAddressHeading = styled.h4`
+  color: ${({ theme }) => theme.color.dark};
+  font-size: 2rem;
+  align-self: center;
+  font-weight: 500;
+`;
+
 const ContactPage = ({ data }) => (
   <Layout>
     <StyledWrapper>
@@ -77,6 +86,9 @@ const ContactPage = ({ data }) => (
           email="slodkie@bryzol.pl"
         />
       </StyledContentWrapper>
+      <StyledAddressHeading>Nasz adres</StyledAddressHeading>
+      <AddressSection />
+      <Map />
     </StyledWrapper>
   </Layout>
 );
