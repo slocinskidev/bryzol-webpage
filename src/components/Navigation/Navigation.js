@@ -52,6 +52,8 @@ const LinkStyled = styled(AniLink)`
   color: ${({ theme }) => theme.color.white};
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.shadow.box};
+  transition: all 0.3s ease;
+  outline: none;
 
   &:hover,
   &:active,

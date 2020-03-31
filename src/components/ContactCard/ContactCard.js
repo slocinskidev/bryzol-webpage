@@ -75,6 +75,11 @@ const Telephone = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: color 0.3s ease;
+
+  & svg {
+    transition: color 0.3s ease;
+  }
 
   &:hover,
   &:active,
@@ -97,6 +102,11 @@ const Email = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: color 0.3s ease;
+
+  & svg {
+    transition: color 0.3s ease;
+  }
 
   &:hover,
   &:active,
@@ -118,7 +128,7 @@ const ShareIcon = styled(Icon)`
   color: ${({ theme }) => theme.color.primary};
   width: 35px;
   height: 35px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 
   &:hover,
   &:active {

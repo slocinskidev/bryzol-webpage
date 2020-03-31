@@ -50,6 +50,11 @@ const Logo = styled.div`
   width: 150px;
   height: 150px;
   background-image: url(${({ image }) => image});
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const DesktopHeader = () => {

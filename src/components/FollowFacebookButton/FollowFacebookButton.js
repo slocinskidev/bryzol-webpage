@@ -43,6 +43,12 @@ const FacebookLink = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
+  outline: none;
+
+  & svg {
+    transition: all 0.3s ease;
+  }
 
   &:hover,
   &:active,

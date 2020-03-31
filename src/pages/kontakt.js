@@ -88,7 +88,7 @@ const StyledAddressHeading = styled.h3`
   margin: 120px 0 20px;
   color: ${({ theme }) => theme.color.dark};
   font-size: 2.4rem;
-  align-self: center;
+  text-align: center;
   font-weight: 700;
 `;
 

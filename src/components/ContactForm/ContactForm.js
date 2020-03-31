@@ -55,6 +55,7 @@ const Button = styled.button`
   font-size: 14px;
   font-weight: 700;
   transition: background-color 0.2s ease;
+  outline: none;
 
   &:hover,
   &:focus {

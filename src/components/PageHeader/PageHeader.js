@@ -13,12 +13,17 @@ const HeaderWrapper = styled.header`
   min-height: 10vh;
   justify-content: space-between;
   align-items: center;
+
+  a {
+    outline: none;
+  }
 `;
 
 const IconStyled = styled(Icon)`
   color: ${({ theme }) => theme.color.primary};
   width: 50px;
   height: 50px;
+  transition: color 0.3s ease;
 
   &:hover,
   &:active,
