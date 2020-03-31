@@ -18,33 +18,33 @@ const StyledWrapper = styled.section`
 `;
 
 const StyledHeaderWrapper = styled.div`
+  padding: 10px;
   width: 100%;
   background-color: ${({ theme }) => theme.color.primary};
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-areas:
-    'avatar avatar'
-    'name name';
-
-  @media (min-width: 430px) {
-    grid-template-areas:
-      'avatar name'
-      'avatar name';
-  }
+    'avatar name'
+    'avatar name';
 `;
 
 const StyledAvatarWrapper = styled.img`
-  margin: 20px 0 10px 20px;
-  width: 100px;
-  height: 100px;
+  margin: 0;
+  width: 75px;
+  height: 75px;
   background-image: url(${({ avatar }) => avatar});
   border: 2px solid white;
   background-size: cover;
   grid-area: avatar;
+
+  @media (min-width: 400px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 const StyledName = styled.h3`
-  margin: 0 0 10px 20px;
+  margin: 0 0 0 10px;
   font-size: ${({ theme }) => theme.font.h4};
   font-weight: 500;
   color: ${({ theme }) => theme.color.white};
@@ -52,9 +52,9 @@ const StyledName = styled.h3`
   align-self: center;
   text-align: left;
 
-  @media (min-width: 501px) {
+  @media (min-width: 400px) {
     font-size: ${({ theme }) => theme.font.h3};
-    margin: 0 0 0 20px;
+    margin: 0 0 0 10px;
   }
 `;
 
@@ -118,6 +118,7 @@ const ShareIcon = styled(Icon)`
   color: ${({ theme }) => theme.color.primary};
   width: 35px;
   height: 35px;
+  transition: all 0.2s ease;
 
   &:hover,
   &:active {

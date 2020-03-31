@@ -21,9 +21,29 @@ const PosedPageHeaderWrapper = posed.div({
   },
 });
 
-const PosedContentWrapper = posed.div({
+const PosedContactWrapper = posed.div({
+  visible: {
+    delay: 250,
+    opacity: 1,
+  },
+  hidden: {
+    opacity: 0,
+  },
+});
+
+const PosedAddress = posed.div({
   visible: {
     delay: 500,
+    opacity: 1,
+  },
+  hidden: {
+    opacity: 0,
+  },
+});
+
+const PosedForm = posed.div({
+  visible: {
+    delay: 750,
     opacity: 1,
   },
   hidden: {
@@ -47,7 +67,7 @@ const StyledPageHeaderWrapper = styled(PosedPageHeaderWrapper)`
   padding: 20px 0 40px;
 `;
 
-const StyledContentWrapper = styled(PosedContentWrapper)`
+const StyledContactWrapper = styled(PosedContactWrapper)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -60,11 +80,12 @@ const StyledContentWrapper = styled(PosedContentWrapper)`
   }
 `;
 
-const StyledAddressHeading = styled.h4`
+const StyledAddressHeading = styled.h3`
+  margin: 120px 0 20px;
   color: ${({ theme }) => theme.color.dark};
-  font-size: 2rem;
+  font-size: 2.4rem;
   align-self: center;
-  font-weight: 500;
+  font-weight: 700;
 `;
 
 const ContactPage = ({ data }) => {
@@ -83,7 +104,7 @@ const ContactPage = ({ data }) => {
         <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
           <PageHeader title="Kontakt" subtitle="Zadzwoń, napisz lub skorzystaj z formularza" />
         </StyledPageHeaderWrapper>
-        <StyledContentWrapper>
+        <StyledContactWrapper pose={visible ? 'visible' : 'hidden'}>
           <ContactCard
             name="Andrzej Słociński"
             avatar={data.allFile.nodes[0].childImageSharp.fluid.src}
@@ -96,11 +117,15 @@ const ContactPage = ({ data }) => {
             tel="502 315 715"
             email="slodkie@bryzol.pl"
           />
-        </StyledContentWrapper>
-        <StyledAddressHeading>Nasz adres</StyledAddressHeading>
-        <AddressSection />
-        <Map />
-        <ContactForm />
+        </StyledContactWrapper>
+        <PosedAddress pose={visible ? 'visible' : 'hidden'}>
+          <StyledAddressHeading>Nasz adres</StyledAddressHeading>
+          <AddressSection />
+          <Map />
+        </PosedAddress>
+        <PosedForm pose={visible ? 'visible' : 'hidden'}>
+          <ContactForm />
+        </PosedForm>
       </StyledWrapper>
     </Layout>
   );

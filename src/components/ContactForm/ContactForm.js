@@ -9,7 +9,7 @@ const StyledWrapper = styled.section`
   width: 100%;
   max-width: 500px;
   height: 100%;
-  margin: 40px auto;
+  margin: 120px auto 40px;
 `;
 
 const StyledForm = styled.form`
@@ -20,12 +20,20 @@ const StyledForm = styled.form`
 const StyledInput = styled.input`
   position: relative;
   display: block;
-  border: 2px solid ${({ theme }) => theme.color.primary};
+  border: 0;
+  outline: none;
+  box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.color.primary};
   background: none;
   font-family: Montserrat;
   font-size: 1.6rem;
   height: ${({ as }) => (as ? '200px' : 'auto')};
   width: 100%;
+  transition: box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 0px 3px ${({ theme }) => theme.color.secondary};
+  }
 `;
 
 const StyledLabel = styled.label`
@@ -40,11 +48,18 @@ const StyledLabel = styled.label`
 const Button = styled.button`
   background-color: ${({ theme }) => theme.color.primary};
   border: none;
+  cursor: pointer;
   margin: 20px 0 0;
   padding: 10px 30px;
   color: ${({ theme }) => theme.color.white};
   font-size: 14px;
   font-weight: 700;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: ${({ theme }) => theme.color.secondary};
+  }
 `;
 
 const StyledHeading = styled.h3`
@@ -88,12 +103,14 @@ const ContactForm = () => (
             values,
           )
           .then(res => {
-            toast.success('Mail został wysłany pomyślnie');
+            toast.success('Mail został wysłany...');
             resetForm();
             setSubmitting(false);
           })
           .catch(err => {
-            toast.error('Nie udało się wysłać maila');
+            toast.error(
+              'Wystąpił błąd w wysyłaniu maila... Spróbuj ponownie lub napisz do nas bezpośrednio',
+            );
             setSubmitting(false);
           });
       }}
