@@ -51,6 +51,10 @@ const PosedForm = posed.div({
   },
 });
 
+const StyledPosedForm = styled(PosedForm)`
+  margin: 0 0 20px;
+`;
+
 // Style
 
 const StyledWrapper = styled.div`
@@ -123,9 +127,9 @@ const ContactPage = ({ data }) => {
           <AddressSection />
           <Map />
         </PosedAddress>
-        <PosedForm pose={visible ? 'visible' : 'hidden'}>
+        <StyledPosedForm pose={visible ? 'visible' : 'hidden'}>
           <ContactForm />
-        </PosedForm>
+        </StyledPosedForm>
       </StyledWrapper>
     </Layout>
   );
