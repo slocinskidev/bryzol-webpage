@@ -5,6 +5,10 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "no-shadow": "off",
     "no-unused-vars": "off",
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react/forbid-prop-types": 0
+  },
+  "globals": {
+    "window": true
   }
 }

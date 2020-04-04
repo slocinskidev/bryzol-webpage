@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import posed from 'react-pose';
 import styled from 'styled-components';
-import Image from 'gatsby-image';
 import Layout from '../layouts/Layout';
 import PageHeader from '../components/PageHeader/PageHeader';
+import Gallery from '../components/Gallery/Gallery';
 
 // Pose
 const PosedPageHeaderWrapper = posed.div({
@@ -47,33 +47,9 @@ const StyledPageHeaderWrapper = styled(PosedPageHeaderWrapper)`
 const StyledContentWrapper = styled(PosedContentWrapper)`
   width: 100%;
   height: 100%;
-  display: grid;
-  text-align: center;
-  justify-content: center;
 `;
 
-const StyledText = styled.h3`
-  font-size: ${({ theme }) => theme.font.h3};
-  color: ${({ theme }) => theme.color.secondary};
-  text-transform: uppercase;
-`;
-
-const StyledTextMore = styled.h4`
-  margin-top: -20px;
-  font-size: ${({ theme }) => theme.font.h4};
-  color: ${({ theme }) => theme.color.secondary};
-  font-weight: 400;
-  text-transform: uppercase;
-`;
-
-const StyledImage = styled(Image)`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin: 0 auto;
-`;
-
-const GalleryPage = ({ data }) => {
+const GalleryPage = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -87,31 +63,14 @@ const GalleryPage = ({ data }) => {
     <Layout>
       <StyledWrapper>
         <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
-          <PageHeader title="Galeria" />
+          <PageHeader title="Galeria" subtitle="Kliknij by powiększyć zdjęcie" />
         </StyledPageHeaderWrapper>
         <StyledContentWrapper pose={visible ? 'visible' : 'hidden'}>
-          <StyledText>Strona w budowie</StyledText>
-          <StyledTextMore>Pozostało do wbicia jeszcze kilka gwoździ...</StyledTextMore>
-          <StyledImage
-            fluid={data.file.childImageSharp.fluid}
-            alt="Zdjęcie przedstawiające budowę"
-          />
+          <Gallery />
         </StyledContentWrapper>
       </StyledWrapper>
     </Layout>
   );
 };
-
-export const query = graphql`
-  {
-    file(absolutePath: { regex: "/under-construction/" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
 
 export default GalleryPage;
