@@ -5,16 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { theme } from '../../styles/mainTheme';
 
-const PosedRibbon = posed.div({
-  visible: {
-    opacity: 1,
-  },
-  hidden: {
-    opacity: 0,
-  },
-});
-
-const Ribbon = styled(PosedRibbon)`
+const Ribbon = styled.div`
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -70,19 +61,10 @@ const DesktopHeader = () => {
     }
   `);
 
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(!visible);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
       <TopLine />
-      <Ribbon pose={visible ? 'visible' : 'hidden'}>
+      <Ribbon>
         <a href="/">
           <Logo image={data.file.childImageSharp.fixed.src} />
         </a>

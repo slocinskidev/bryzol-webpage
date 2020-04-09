@@ -10,10 +10,12 @@ const ItemButton = styled.button`
   margin: 0;
   padding: 0;
   display: inline-block;
+  height: 100%;
   width: 100%;
 
   & div {
     transition: all 0.3s ease;
+    background-position: center top;
   }
 
   & div:hover {

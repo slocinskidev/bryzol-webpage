@@ -12,7 +12,7 @@ const FullPageImage = props => {
         ...(props.style || {}),
         maxWidth: props.fluid.presentationWidth,
         height: window.innerHeight - 100,
-        width: 'auto',
+        width: '100%',
         margin: '50px auto 50px',
       },
     };
