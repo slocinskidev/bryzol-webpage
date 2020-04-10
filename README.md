@@ -8,6 +8,8 @@
 </h1>
 
   Website based on Gatsby.js for Bryzol Catering, this is a second webiste built for this company.
+  
+## [DEMO](https://bryzol-webpage.netlify.com/)
 
 ## Table of contents
 * [General info](#general-info)
