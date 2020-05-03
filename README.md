@@ -7,5 +7,40 @@
   Bryzol Catering Webpage
 </h1>
 
-Bryzol Catering to firma oferująca usługi cateringu zarówno słonego, jak i słodkiego. Wszelkie oferty tworzone są pod potrzeby Klienta. Firmę stworzyli dwaj pasjonaci. Jeden lubuje się w gotowaniu i tworzeniu nowoczesnych w formie dań ze znanych nam klasyków. Drugi za to wymyśla grzechu warte desery i torty.
+  Website based on Gatsby.js for Bryzol Catering, this is a second webiste built for this company.
+  
+## [DEMO](https://bryzol-webpage.netlify.com/)
+
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Features](#features)
+* [Status](#status)
+* [Contact](#contact)
+
+## General info
+This project was created because I wanted to build real website, not from tutorial. This website is based on client needs. :rainbow:
+
+## Screenshots
+![bryzol webpage screenshot](src/images/screenshot.png)
+
+## Technologies
+* Gatsby.js
+* Styled-components
+* GraphQL
+* Figma
+
+## Features
+* Contact form with Firebase function -> [Bryzol Firebase](https://github.com/erq-programmer/bryzol-firebase)
+* Offer page with clickable product list, like shopping list...
+
+## Status
+Project is: _in progress_
+
+To-do list:
+- [ ] Offer page
+
+## Contact
+Created by [@erykslocinski](mailto:eryk.slocinski@gmail.com) - feel free to contact me!
 
