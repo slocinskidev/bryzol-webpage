@@ -76,6 +76,7 @@ const Telephone = styled.a`
   align-items: center;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: 500;
 
   & svg {
     transition: color 0.3s ease;
@@ -103,6 +104,7 @@ const Email = styled.a`
   align-items: center;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: 500;
 
   & svg {
     transition: color 0.3s ease;

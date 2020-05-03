@@ -59,7 +59,7 @@ const HeaderSubtitle = styled.span`
 
 const PageHeader = ({ title, subtitle }) => (
   <HeaderWrapper>
-    <AniLink to="/" paintDrip hex="#52542C" duration={0.5}>
+    <AniLink fade to="/">
       <IconStyled icon={bxArrowBack} />
     </AniLink>
     <TextWrapper>

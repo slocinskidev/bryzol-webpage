@@ -10,6 +10,8 @@
     "@iconify/icons-el": "^1.0.4",
     "@iconify/icons-foundation": "^1.0.3",
     "@iconify/icons-ic": "^1.0.9",
+    "@iconify/icons-ls": "^1.0.3",
+    "@iconify/icons-whh": "^1.0.3",
     "@iconify/react": "^1.1.3",
     "@material-ui/core": "^4.9.9",
     "axios": "^0.19.2",

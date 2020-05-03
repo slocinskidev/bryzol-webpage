@@ -15,7 +15,6 @@ const ItemButton = styled.button`
 
   & div {
     transition: all 0.3s ease;
-    background-position: center top;
   }
 
   & div:hover {
@@ -27,7 +26,6 @@ const PhotoItem = ({ images, handleOpen }) => {
   return images.map((image, i) => (
     <ItemButton onClick={handleOpen(i)} key={image.node.id}>
       <Img fluid={image.node.childImageSharp.fluid} alt={image.node.name} />
-      {/* I must rename image name */}
     </ItemButton>
   ));
 };

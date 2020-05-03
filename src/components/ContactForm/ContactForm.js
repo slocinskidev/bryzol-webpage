@@ -105,7 +105,7 @@ const ContactForm = () => {
         onSubmit={(values, { setSubmitting, resetForm }) => {
           axios
             .post(
-              'https://us-central1-bryzol-webpage-contact-f-971f1.cloudfunctions.net/sendEmails',
+              'https://us-central1-bryzol-webpage-contact-f-971f1.cloudfunctions.net/sendEmail',
               values,
             )
             .then(res => {

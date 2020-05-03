@@ -38,8 +38,8 @@ const TopLine = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-image: url(${({ image }) => image});
   transition: all 0.3s ease;
 
@@ -53,7 +53,7 @@ const DesktopHeader = () => {
     {
       file(name: { eq: "logo" }) {
         childImageSharp {
-          fixed(width: 150, height: 150) {
+          fixed(width: 120, height: 120) {
             src
           }
         }

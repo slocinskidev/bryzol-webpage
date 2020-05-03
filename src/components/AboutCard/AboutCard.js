@@ -120,28 +120,28 @@ const Signature = styled.p`
 `;
 
 const AboutCard = ({ avatar, name, more, content }) => {
-  const [setActive, setActiveState] = useState('');
-  const [setHeight, setHeightState] = useState('0px');
-  const [setRotate, setRotateState] = useState('');
+  const [active, setActive] = useState('');
+  const [height, setHeight] = useState('0px');
+  const [rotate, setRotate] = useState('');
 
   const contentRef = useRef(null);
 
   const toggleAccordion = () => {
-    setActiveState(setActive === '' ? 'active' : '');
-    setHeightState(setActive === 'active' ? '0px' : `${contentRef.current.scrollHeight}px`);
-    setRotateState(setActive === 'active' ? '' : 'rotate');
+    setActive(active === '' ? 'active' : '');
+    setHeight(active === 'active' ? '0px' : `${contentRef.current.scrollHeight}px`);
+    setRotate(active === 'active' ? '' : 'rotate');
   };
 
   return (
     <StyledWrapper>
-      <StyledCardHeader onClick={toggleAccordion} className={setActive}>
-        <ChevronStyled className={`${setRotate}`} width={30} height={30} fill="#fff" />
+      <StyledCardHeader onClick={toggleAccordion} className={active}>
+        <ChevronStyled className={`${rotate}`} width={30} height={30} fill="#fff" />
         <StyledAvatarWrapper avatar={avatar} />
         <StyledName>{name}</StyledName>
         <StyledNameMore>{more}</StyledNameMore>
       </StyledCardHeader>
       <StyledCardContent>
-        <AccordionContent ref={contentRef} style={{ maxHeight: `${setHeight}` }}>
+        <AccordionContent ref={contentRef} style={{ maxHeight: `${height}` }}>
           <AccordionText>{content}</AccordionText>
           <Signature>Podpis</Signature>
         </AccordionContent>

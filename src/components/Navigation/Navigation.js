@@ -76,22 +76,22 @@ const Navigation = () => {
     <NavigationWrapper>
       <NavigationList pose={visible ? 'visible' : 'hidden'}>
         <NavigationListItem>
-          <LinkStyled to="/o-nas" paintDrip duration={0.5} hex="#52542C">
+          <LinkStyled fade to="/o-nas">
             O Nas
           </LinkStyled>
         </NavigationListItem>
         <NavigationListItem>
-          <LinkStyled to="/oferta" paintDrip duration={0.5} hex="#52542C">
+          <LinkStyled fade to="/oferta">
             Oferta
           </LinkStyled>
         </NavigationListItem>
         <NavigationListItem>
-          <LinkStyled to="/galeria" paintDrip duration={0.5} hex="#52542C">
+          <LinkStyled fade to="/galeria">
             Galeria
           </LinkStyled>
         </NavigationListItem>
         <NavigationListItem>
-          <LinkStyled to="/kontakt" paintDrip duration={0.5} hex="#52542C">
+          <LinkStyled fade to="/kontakt">
             Kontakt
           </LinkStyled>
         </NavigationListItem>

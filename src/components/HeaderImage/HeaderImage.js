@@ -4,8 +4,8 @@ import Image from 'gatsby-image';
 import styled from 'styled-components';
 
 const StyledImage = styled(Image)`
-  min-height: 250px;
-  height: 35vh;
+  min-height: 300px;
+  height: 40vh;
   width: 100%;
   object-fit: cover;
   object-position: bottom;
