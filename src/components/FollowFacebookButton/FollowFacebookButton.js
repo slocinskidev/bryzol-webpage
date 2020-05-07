@@ -21,7 +21,7 @@ const ButtonWrapper = styled(PosedButtonWrapper)`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 10px 0 30px;
+  padding: 10px;
 
   @media (min-width: 992px) {
     padding: 0 50px 30px 0;

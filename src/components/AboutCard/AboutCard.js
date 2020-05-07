@@ -33,6 +33,7 @@ const StyledCardHeader = styled.div`
   background-color: ${({ theme }) => theme.color.primary};
   display: grid;
   grid-template-columns: auto 1fr;
+  transition: 0.6s background-color ease;
   grid-template-areas:
     'avatar more'
     'name name';

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-boolean-value */
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
@@ -57,8 +58,13 @@ const StyledInfoWrapper = styled(PosedAboutCardWrapper)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto 60px;
   width: 100%;
   height: 100%;
+
+  @media (min-width: 992px) {
+    margin: 0;
+  }
 `;
 
 const StyledHeading = styled.h3`
@@ -123,7 +129,7 @@ const EmailIcon = styled(Icon)`
   margin-right: 10px;
 `;
 
-const DinnerPage = ({ data }) => {
+const DinnerPage = dinners => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -151,7 +157,7 @@ const DinnerPage = ({ data }) => {
               kontakt@bryzol.pl
             </Email>
             <StyledHeading>Odbiór</StyledHeading>
-            <AddressSection />
+            <AddressSection dinners />
           </StyledInfoWrapper>
           <DinnerList />
         </ContentWrapper>

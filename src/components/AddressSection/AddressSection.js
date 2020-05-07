@@ -27,13 +27,14 @@ const StyledAddressList = styled.ul`
   font-weight: 500;
 `;
 
-const AddressSection = () => {
+const AddressSection = ({ dinners }) => {
   return (
     <StyledWrapper>
       <MapIcon icon={bxMap}>Map Icon</MapIcon>
       <StyledAddressList>
         <li>ul. Bramkowa 3</li>
         <li>44-240 Żory</li>
+        {dinners && <li>godz. 14:00 - 19:00</li>}
       </StyledAddressList>
     </StyledWrapper>
   );

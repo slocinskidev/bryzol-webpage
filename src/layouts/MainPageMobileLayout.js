@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer';
 
 const StyledWrapper = styled.div`
   width: 100%;
-  width: 100%;
+  height: 100%;
   min-height: 100vh;
   padding: 0;
   display: grid;

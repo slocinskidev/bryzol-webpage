@@ -159,7 +159,7 @@ const ContactCard = ({ name, tel, email, avatar }) => {
             {email}
           </Email>
         </StyledContactElements>
-        <ShareIcon icon={bxsShareAlt} />
+        {/* <ShareIcon icon={bxsShareAlt} /> */}
       </StyledContactWrapper>
     </StyledWrapper>
   );
