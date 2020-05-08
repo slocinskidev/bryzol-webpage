@@ -57,11 +57,17 @@ const HeaderSubtitle = styled.span`
   }
 `;
 
-const PageHeader = ({ title, subtitle }) => (
+const PageHeader = ({ title, subtitle, nested }) => (
   <HeaderWrapper>
-    <AniLink fade to="/">
-      <IconStyled icon={bxArrowBack} />
-    </AniLink>
+    {nested ? (
+      <AniLink fade to="/oferta">
+        <IconStyled icon={bxArrowBack} />
+      </AniLink>
+    ) : (
+      <AniLink fade to="/">
+        <IconStyled icon={bxArrowBack} />
+      </AniLink>
+    )}
     <TextWrapper>
       <HeaderTitle>{title}</HeaderTitle>
       <HeaderSubtitle>{subtitle}</HeaderSubtitle>

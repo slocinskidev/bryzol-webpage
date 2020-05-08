@@ -143,7 +143,7 @@ const DinnerPage = dinners => {
     <Layout>
       <StyledWrapper>
         <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
-          <PageHeader title="Obiady" subtitle="Menu cateringowe 20.01 - 24.01.2020" />
+          <PageHeader nested title="Obiady" subtitle="Menu cateringowe 20.01 - 24.01.2020" />
         </StyledPageHeaderWrapper>
         <ContentWrapper>
           <StyledInfoWrapper pose={visible ? 'visible' : 'hidden'}>
