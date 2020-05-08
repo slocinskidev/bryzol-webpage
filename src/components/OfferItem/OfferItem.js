@@ -6,7 +6,7 @@ import Chevron from '../Chevron/Chevron';
 import { theme } from '../../styles/mainTheme';
 
 const StyledWrapper = styled.section`
-  margin: 5px;
+  margin: 5px auto;
   width: 100%;
   max-width: 960px;
   display: flex;
@@ -40,6 +40,7 @@ const Header = styled.header`
 
 const OfferList = styled.ul`
   padding: 0;
+  margin: 0;
   width: 100%;
   background-color: white;
   list-style: none;
@@ -67,6 +68,10 @@ const OfferListItem = styled.li`
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid ${({ theme }) => theme.color.primary};
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
   }
 
   &:nth-child(1) {
@@ -116,7 +121,6 @@ const OfferItem = ({ item, content, price }) => {
         <Heading>{item}</Heading>
         <ChevronStyled className={active ? 'rotate' : ''} width={25} height={25} fill="#fff" />
       </Header>
-
       <OfferList ref={contentRef}>
         {content.map(item => (
           <OfferListItem key={item}>{item}</OfferListItem>

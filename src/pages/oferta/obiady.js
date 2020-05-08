@@ -5,10 +5,10 @@ import posed from 'react-pose';
 import { Icon } from '@iconify/react';
 import telephoneIcon from '@iconify/icons-foundation/telephone';
 import outlineEmail from '@iconify/icons-ic/outline-email';
-import Layout from '../layouts/Layout';
-import DinnerList from '../components/DinnerList/DinnerList';
-import PageHeader from '../components/PageHeader/PageHeader';
-import AddressSection from '../components/AddressSection/AddressSection';
+import Layout from '../../layouts/Layout';
+import DinnerList from '../../components/DinnerList/DinnerList';
+import PageHeader from '../../components/PageHeader/PageHeader';
+import AddressSection from '../../components/AddressSection/AddressSection';
 
 const PosedAboutCardWrapper = posed.ul({
   visible: {
