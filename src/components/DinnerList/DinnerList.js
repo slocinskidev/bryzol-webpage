@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import DinnerItem from './DinnerItem';
 
@@ -8,16 +9,22 @@ const Wrapper = styled.section`
 `;
 
 const DinnerList = () => {
+  const data = useStaticQuery(graphql`
+    {
+      datoCmsDinner {
+        weekDays {
+          date(locale: "pl", formatString: "dddd, DD MMMM YYYY")
+          soup
+          meal
+        }
+      }
+    }
+  `);
   return (
     <Wrapper>
-      <DinnerItem
-        day="Poniedziałek"
-        soup="Kalafiorowa"
-        meal="Kotlet schabowy, pieczone ziemniaki 
-i surówka z ogórków kiszonych z frytkami"
-      />
-      <DinnerItem day="Poniedziałek" soup="Kalafiorowa" meal="Łosoś z frytkami" />
-      <DinnerItem day="Poniedziałek" soup="Kalafiorowa" meal="Łosoś z frytkami" />
+      {data.datoCmsDinner.weekDays.map(item => (
+        <DinnerItem key={item.date} day={item.date} soup={item.soup} meal={item.meal} />
+      ))}
     </Wrapper>
   );
 };

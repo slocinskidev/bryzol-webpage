@@ -93,7 +93,7 @@ const Price = styled.li`
   background-color: ${({ theme }) => theme.color.primary};
   width: 100px;
   height: 100px;
-  margin: 0 auto 20px;
+  margin: 20px auto 20px;
   padding: 0;
   text-align: center;
   font-size: ${({ theme }) => theme.font.h4};

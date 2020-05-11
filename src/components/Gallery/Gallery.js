@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PhotoItem from './PhotoItem';
 import LightBox from './Lightbox';
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   width: 100%;
   height: 100%;
   column-count: 1;

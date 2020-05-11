@@ -73,15 +73,17 @@ const AboutPage = ({ data }) => {
         <StyledAboutCardWrapper pose={visible ? 'visible' : 'hidden'}>
           <AboutCard
             name="Andrzej Słociński"
-            // more=""
+            more="Szef kuchni"
             avatar={data.allFile.nodes[0].childImageSharp.fluid.src}
             content="Mam na imię Andrzej, od kilkunastu lat zajmuję się gastronomią, a konkretnie profesjonalną i kompleksową obsługą imprez okolicznościowych u klienta. Jestem osobą staranną i wszystkie powierzone mi zlecenia wykonuję na najwyższym poziomie. Staram się dopasować do gustów podniebienia i oczekiwań klienta. Nie ma rzeczy niemożliwych, możemy odtworzyć danie z dalekiej podróży i wakacji. Zawsze dla mnie najważniejszy jest klient i jego zadowolenie z wykonania mojej pracy. Daje mi to energię i inspirację do dalszego kształcenia oraz podnoszenia moich kwalifikacji."
+            signature="Andrzej Słociński"
           />
           <AboutCard
             name="Adam Gembalczyk"
-            // more=""
+            more="Specjalista od wyrobów cukierniczych"
             avatar={data.allFile.nodes[1].childImageSharp.fluid.src}
-            content="Mam na imię Andrzej, od kilkunastu lat zajmuję się gastronomią, a konkretnie profesjonalną i kompleksową obsługą imprez okolicznościowych u klienta. Jestem osobą staranną i wszystkie powierzone mi zlecenia wykonuję na najwyższym poziomie. Staram się dopasować do gustów podniebienia i oczekiwań klienta. Nie ma rzeczy niemożliwych, możemy odtworzyć danie z dalekiej podróży i wakacji. Zawsze dla mnie najważniejszy jest klient i jego zadowolenie z wykonania mojej pracy. Daje mi to energię i inspirację do dalszego kształcenia oraz podnoszenia moich kwalifikacji."
+            content="Nazywam się Adam i jestem specjalistą od wyrobów cukierniczych. Już od młodych lat moim marzeniem było tworzyć poezję dla smaku. W późniejszych latach prowadziłem jedną z pierwszych cukiernii w Żorach. Powiada, że smak słodki najlepszy jest na smutki. Cechuje mnie dbałość o detale, ponieważ w mojej pracy ważne jest to by nie tylko smakowało, ale i wyglądało."
+            signature="Adam Gembalczyk"
           />
         </StyledAboutCardWrapper>
       </StyledWrapper>

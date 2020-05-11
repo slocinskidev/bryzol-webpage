@@ -61,6 +61,10 @@ const Title = styled.h3`
   align-self: end;
   margin: 0;
 
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
   @media (min-width: 501px) {
     font-size: ${({ theme }) => theme.font.h3};
   }

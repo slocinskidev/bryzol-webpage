@@ -120,7 +120,7 @@ const Signature = styled.p`
   padding: 0 20px 10px 0;
 `;
 
-const AboutCard = ({ avatar, name, more, content }) => {
+const AboutCard = ({ avatar, name, more, content, signature }) => {
   const [active, setActive] = useState('');
   const [height, setHeight] = useState('0px');
   const [rotate, setRotate] = useState('');
@@ -144,7 +144,7 @@ const AboutCard = ({ avatar, name, more, content }) => {
       <StyledCardContent>
         <AccordionContent ref={contentRef} style={{ maxHeight: `${height}` }}>
           <AccordionText>{content}</AccordionText>
-          <Signature>Podpis</Signature>
+          <Signature>{signature}</Signature>
         </AccordionContent>
       </StyledCardContent>
     </StyledWrapper>
@@ -156,6 +156,7 @@ AboutCard.propTypes = {
   content: PropTypes.string.isRequired,
   more: PropTypes.string,
   avatar: PropTypes.string.isRequired,
+  signature: PropTypes.string.isRequired,
 };
 
 AboutCard.defaultProps = {

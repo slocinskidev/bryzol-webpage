@@ -48,7 +48,7 @@ const StyledContentWrapper = styled.div`
 `;
 
 const MainHeading = styled.h3`
-  margin: 0 0 0px;
+  margin: 0 0 10px;
   color: ${({ theme }) => theme.color.dark};
   font-size: ${({ theme }) => theme.font.h3};
   text-align: center;
@@ -58,9 +58,9 @@ const MainHeading = styled.h3`
 const HeadingDescription = styled.p`
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 0 0 10px;
   line-height: 1.5;
-  font-size: ${({ theme }) => theme.font.normal};
+  font-size: ${({ theme }) => theme.font.p};
 `;
 
 const StyledLink = styled(AniLink)`
@@ -84,7 +84,7 @@ const StyledLink = styled(AniLink)`
 `;
 
 const SectionWrapper = styled.section`
-  margin: 20px 0;
+  margin: 20px 0 60px;
   padding: 0;
   width: 100%;
   display: flex;
@@ -106,7 +106,7 @@ const StyledIcon = styled(Icon)`
   color: ${({ theme }) => theme.color.dark};
   width: 40px;
   height: 40px;
-  margin: 0;
+  margin: 0 10px 10px;
 `;
 
 const offerData = {
@@ -218,79 +218,27 @@ const offerData = {
   cateringOfferList: [
     {
       item: 'Przekąski zimne',
-      content: [
-        'Polędwiczki wieprzowe z sosem pieprzowym lub grzybowym 6p.',
-        'Udko z kurczak b/k z rozmarynem lub udko z/k z czosnkiem 6szt.',
-        'Schab z oscypkiem lub pieczeń 6szt.',
-        'Sznycelki drobiowe lub dewolaj 6szt.',
-        'Pierś z kaczki z rozmarynem lub udko 6p.',
-        'Ziemniaki pieczone lub ziemniaki pure z boczkiem 10szt.',
-        'Pęczatto z warzywami lub risotto z grzybami 1kg',
-        'Kapusta lekka lub kapusta po góralsku 1,5kg',
-      ],
+      content: ['W trakcie...'],
     },
     {
       item: 'Przekąski ciepłe',
-      content: [
-        'Sakiewki z szynki 16szt.',
-        'Polędwiczki z suszonymi pomidorami 10szt.',
-        'Galantynki drobiowe z nadzieniem pieprzowym 10szt.',
-        'Jajka z śledziem korzennym 8szt.',
-        'Łosoś z ajwarem 10szt.',
-        'Pomidorki koktajlowe z mozarellą 16szt.',
-        'Tatar wołowy 8szt.',
-        'Sałatka lekka(mix sałat, pomidor, ogórek, mango,kiełki, pestki, sos winegret) 1 miska',
-        'Brokuły z sosem czosnkowym i prażonymi migdałami 1 miska',
-      ],
+      content: ['W trakcie...'],
     },
     {
       item: 'Zupy',
-      content: [
-        'Krem czekoladowy 10szt.',
-        'Panna cotta 10szt.',
-        'Chija z jogurtem 10szt.',
-        'Creme brulle 10szt.',
-        'Sałatka owocowa w tartoletkach 10szt.',
-      ],
+      content: ['W trakcie...'],
     },
     {
       item: 'Ciepłe dania',
-      content: [
-        'Polędwiczki wieprzowe z sosem pieprzowym lub grzybowym 6p.',
-        'Udko z kurczak b/k z rozmarynem lub udko z/k z czosnkiem 6szt.',
-        'Schab z oscypkiem lub pieczeń 6szt.',
-        'Sznycelki drobiowe lub dewolaj 6szt.',
-        'Pierś z kaczki z rozmarynem lub udko 6p.',
-        'Ziemniaki pieczone lub ziemniaki pure z boczkiem 10szt.',
-        'Pęczatto z warzywami lub risotto z grzybami 1kg',
-        'Kapusta lekka lub kapusta po góralsku 1,5kg',
-      ],
+      content: ['W trakcie...'],
     },
     {
       item: 'Dodatki',
-      content: [
-        'Polędwiczki wieprzowe z sosem pieprzowym lub grzybowym 6p.',
-        'Udko z kurczak b/k z rozmarynem lub udko z/k z czosnkiem 6szt.',
-        'Schab z oscypkiem lub pieczeń 6szt.',
-        'Sznycelki drobiowe lub dewolaj 6szt.',
-        'Pierś z kaczki z rozmarynem lub udko 6p.',
-        'Ziemniaki pieczone lub ziemniaki pure z boczkiem 10szt.',
-        'Pęczatto z warzywami lub risotto z grzybami 1kg',
-        'Kapusta lekka lub kapusta po góralsku 1,5kg',
-      ],
+      content: ['W trakcie...'],
     },
     {
       item: 'Desery',
-      content: [
-        'Polędwiczki wieprzowe z sosem pieprzowym lub grzybowym 6p.',
-        'Udko z kurczak b/k z rozmarynem lub udko z/k z czosnkiem 6szt.',
-        'Schab z oscypkiem lub pieczeń 6szt.',
-        'Sznycelki drobiowe lub dewolaj 6szt.',
-        'Pierś z kaczki z rozmarynem lub udko 6p.',
-        'Ziemniaki pieczone lub ziemniaki pure z boczkiem 10szt.',
-        'Pęczatto z warzywami lub risotto z grzybami 1kg',
-        'Kapusta lekka lub kapusta po góralsku 1,5kg',
-      ],
+      content: ['W trakcie...'],
     },
   ],
 };
@@ -330,7 +278,12 @@ const OfferPage = () => {
             <MainHeading>Gotowe zestawy</MainHeading>
             <HeadingDescription>Opis gotowych zestawów!</HeadingDescription>
             {offerData.foodKit.map(offer => (
-              <OfferItem item={offer.item} content={offer.content} price={offer.price} />
+              <OfferItem
+                key={offer.item}
+                item={offer.item}
+                content={offer.content}
+                price={offer.price}
+              />
             ))}
           </SectionWrapper>
 
@@ -340,7 +293,12 @@ const OfferPage = () => {
               Blachy biesiadne to idealny pomysł na imprezę dla 8-10 osób!
             </HeadingDescription>
             {offerData.sheetMetalBanquet.map(offer => (
-              <OfferItem item={offer.item} content={offer.content} price={offer.price} />
+              <OfferItem
+                key={offer.item}
+                item={offer.item}
+                content={offer.content}
+                price={offer.price}
+              />
             ))}
           </SectionWrapper>
 
@@ -348,11 +306,15 @@ const OfferPage = () => {
             <MainHeading>Oferta cateringowa</MainHeading>
             <HeadingDescription>
               Cena jest wyliczana indywidualnie dla każdego klienta na podstawie dań oraz ich
-              ilości.
+              ilości. W celu poznania ceny zapraszam do kontaktu!
             </HeadingDescription>
-            <HeadingDescription>W celu poznania ceny zapraszam do kontaktu!</HeadingDescription>
             {offerData.cateringOfferList.map(offer => (
-              <OfferItem item={offer.item} content={offer.content} price={offer.price} />
+              <OfferItem
+                key={offer.item}
+                item={offer.item}
+                content={offer.content}
+                price={offer.price}
+              />
             ))}
           </SectionWrapper>
         </StyledContentWrapper>

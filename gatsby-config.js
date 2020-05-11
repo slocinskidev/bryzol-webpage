@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Bryzol Catering`,
@@ -21,6 +25,14 @@ module.exports = {
       options: {
         name: `gallery`,
         path: `${__dirname}/src/images/gallery`,
+      },
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.DATOCMS_KEY,
+        previewMode: false,
+        disableLiveReload: false,
       },
     },
     `gatsby-transformer-sharp`,

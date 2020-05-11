@@ -10,7 +10,6 @@ const ItemButton = styled.button`
   margin: 0;
   padding: 0;
   display: inline-block;
-  height: 100%;
   width: 100%;
 
   & div {

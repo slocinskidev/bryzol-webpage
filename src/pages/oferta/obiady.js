@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-boolean-value */
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
 import posed from 'react-pose';
 import { Icon } from '@iconify/react';
 import telephoneIcon from '@iconify/icons-foundation/telephone';
@@ -129,7 +130,10 @@ const EmailIcon = styled(Icon)`
   margin-right: 10px;
 `;
 
-const DinnerPage = dinners => {
+const DinnerPage = ({ data, dinners }) => {
+  const lastDay = data.allDatoCmsDinner.nodes[0].weekDays.length - 1;
+  const subtitleWithDate = `Menu cateringowe: ${data.allDatoCmsDinner.nodes[0].weekDays[0].date} - ${data.allDatoCmsDinner.nodes[0].weekDays[lastDay].date}`;
+
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -143,7 +147,7 @@ const DinnerPage = dinners => {
     <Layout>
       <StyledWrapper>
         <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
-          <PageHeader nested title="Obiady" subtitle="Menu cateringowe 20.01 - 24.01.2020" />
+          <PageHeader nested title="Obiady" subtitle={subtitleWithDate} />
         </StyledPageHeaderWrapper>
         <ContentWrapper>
           <StyledInfoWrapper pose={visible ? 'visible' : 'hidden'}>
@@ -166,4 +170,15 @@ const DinnerPage = dinners => {
   );
 };
 
+export const query = graphql`
+  {
+    allDatoCmsDinner {
+      nodes {
+        weekDays {
+          date(formatString: "DD.MM.YYYY")
+        }
+      }
+    }
+  }
+`;
 export default DinnerPage;
