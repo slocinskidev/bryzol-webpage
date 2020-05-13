@@ -7,40 +7,49 @@
   Bryzol Catering Webpage
 </h1>
 
-  Website based on Gatsby.js for Bryzol Catering, this is a second webiste built for this company.
-  
+Website based on Gatsby.js for Bryzol Catering, this is a second webiste built for this company.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d334e92c-0fe4-493b-b7f7-1655f88e7a55/deploy-status)](https://app.netlify.com/sites/bryzol-webpage/deploys)
+
 ## [DEMO](https://bryzol-webpage.netlify.com/)
 
 ## Table of contents
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Features](#features)
-* [Status](#status)
-* [Contact](#contact)
+
+- [General info](#general-info)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Status](#status)
+- [Contact](#contact)
 
 ## General info
+
 This project was created because I wanted to build real website, not from tutorial. This website is based on client needs. :rainbow:
 
 ## Screenshots
+
 ![bryzol webpage screenshot](src/images/screenshot.png)
 
 ## Technologies
-* Gatsby.js
-* Styled-components
-* GraphQL
-* Figma
+
+- Gatsby.js
+- Styled-components
+- GraphQL
+- Figma
 
 ## Features
-* Contact form with Firebase function -> [Bryzol Firebase](https://github.com/erq-programmer/bryzol-firebase)
-* Offer page with clickable product list, like shopping list...
+
+- Contact form with Firebase function -> [Bryzol Firebase](https://github.com/erq-programmer/bryzol-firebase)
+- Offer page with clickable product list, like shopping list...
 
 ## Status
+
 Project is: _in progress_
 
 To-do list:
+
 - [ ] Offer page
 
 ## Contact
-Created by [@erykslocinski](mailto:eryk.slocinski@gmail.com) - feel free to contact me!
 
+Created by [@erykslocinski](mailto:eryk.slocinski@gmail.com) - feel free to contact me!
