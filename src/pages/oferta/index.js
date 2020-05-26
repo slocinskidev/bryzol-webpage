@@ -9,20 +9,6 @@ import OfferItem from '../../components/OfferItem/OfferItem';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Accordion from '../../components/Accordion/Accordion';
 
-// Pose
-const PosedPageHeaderWrapper = posed.div({
-  visible: {
-    x: 0,
-    opacity: 1,
-  },
-  hidden: {
-    x: '-150%',
-    opacity: 0,
-  },
-});
-
-// Style
-
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,7 +21,7 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const StyledPageHeaderWrapper = styled(PosedPageHeaderWrapper)`
+const StyledPageHeaderWrapper = styled.div`
   padding: 20px 0 40px;
 `;
 

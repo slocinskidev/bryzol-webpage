@@ -5,7 +5,7 @@ import Chevron from '../Chevron/Chevron';
 
 import { theme } from '../../styles/mainTheme';
 
-const StyledWrapper = styled.section`
+const Wrapper = styled.article`
   margin: 10px;
   width: 100%;
   max-width: 500px;
@@ -14,7 +14,7 @@ const StyledWrapper = styled.section`
   box-shadow: ${({ theme }) => theme.shadow.box};
 `;
 
-const ChevronStyled = styled(Chevron)`
+const StyledChevron = styled(Chevron)`
   position: absolute;
   top: 10px;
   right: 10px;
@@ -26,7 +26,7 @@ const ChevronStyled = styled(Chevron)`
   }
 `;
 
-const StyledCardHeader = styled.div`
+const CardHeader = styled.header`
   cursor: pointer;
   position: relative;
   width: 100%;
@@ -49,7 +49,7 @@ const StyledCardHeader = styled.div`
   }
 `;
 
-const StyledAvatarWrapper = styled.img`
+const AvatarImage = styled.div`
   margin: 20px 0 10px 20px;
   width: 100px;
   height: 100px;
@@ -63,11 +63,9 @@ const StyledAvatarWrapper = styled.img`
   }
 `;
 
-const StyledCardContent = styled.div`
+const CardContent = styled.section`
   display: grid;
-`;
-
-const AccordionContent = styled.div`
+  height: 100%;
   padding: 0 20px;
   width: 100%;
   background-color: white;
@@ -83,7 +81,7 @@ const AccordionText = styled.p`
   color: ${({ theme }) => theme.color.dark};
 `;
 
-const StyledName = styled.h3`
+const Name = styled.h3`
   margin: 0 0 10px 20px;
   font-size: ${({ theme }) => theme.font.h4};
   font-weight: 500;
@@ -96,7 +94,7 @@ const StyledName = styled.h3`
   }
 `;
 
-const StyledNameMore = styled.p`
+const Description = styled.p`
   margin: 0 0 0 20px;
   padding-right: 10px;
   font-size: 14px;
@@ -134,20 +132,18 @@ const AboutCard = ({ avatar, name, more, content, signature }) => {
   };
 
   return (
-    <StyledWrapper>
-      <StyledCardHeader onClick={toggleAccordion} className={active}>
-        <ChevronStyled className={`${rotate}`} width={30} height={30} fill="#fff" />
-        <StyledAvatarWrapper avatar={avatar} />
-        <StyledName>{name}</StyledName>
-        <StyledNameMore>{more}</StyledNameMore>
-      </StyledCardHeader>
-      <StyledCardContent>
-        <AccordionContent ref={contentRef} style={{ maxHeight: `${height}` }}>
-          <AccordionText>{content}</AccordionText>
-          <Signature>{signature}</Signature>
-        </AccordionContent>
-      </StyledCardContent>
-    </StyledWrapper>
+    <Wrapper>
+      <CardHeader onClick={toggleAccordion} className={active}>
+        <StyledChevron className={`${rotate}`} width={30} height={30} fill="#fff" />
+        <AvatarImage avatar={avatar} />
+        <Name>{name}</Name>
+        <Description>{more}</Description>
+      </CardHeader>
+      <CardContent ref={contentRef} style={{ maxHeight: `${height}` }}>
+        <AccordionText>{content}</AccordionText>
+        <Signature>{signature}</Signature>
+      </CardContent>
+    </Wrapper>
   );
 };
 

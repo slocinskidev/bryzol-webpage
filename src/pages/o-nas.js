@@ -6,17 +6,7 @@ import Layout from '../layouts/Layout';
 import AboutCard from '../components/AboutCard/AboutCard';
 import PageHeader from '../components/PageHeader/PageHeader';
 
-const PosedAboutCardWrapper = posed.ul({
-  visible: {
-    delay: 500,
-    opacity: 1,
-  },
-  hidden: {
-    opacity: 0,
-  },
-});
-
-const StyledWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,22 +16,11 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const PosedPageHeaderWrapper = posed.div({
-  visible: {
-    x: 0,
-    opacity: 1,
-  },
-  hidden: {
-    x: '-150%',
-    opacity: 0,
-  },
-});
-
-const StyledPageHeaderWrapper = styled(PosedPageHeaderWrapper)`
+const PageHeaderWrapper = styled.div`
   padding: 20px 0 40px;
 `;
 
-const StyledAboutCardWrapper = styled(PosedAboutCardWrapper)`
+const AboutCardWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,23 +33,13 @@ const StyledAboutCardWrapper = styled(PosedAboutCardWrapper)`
   }
 `;
 
-const AboutPage = ({ data }) => {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(!visible);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
+const AboutPage = ({ data }) => (
     <Layout>
-      <StyledWrapper>
-        <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
+      <Wrapper>
+        <PageHeaderWrapper>
           <PageHeader title="O Nas" subtitle="Kliknij by wyświetlić szczegóły" />
-        </StyledPageHeaderWrapper>
-        <StyledAboutCardWrapper pose={visible ? 'visible' : 'hidden'}>
+        </PageHeaderWrapper>
+        <AboutCardWrapper>
           <AboutCard
             name="Andrzej Słociński"
             more="Szef kuchni"
@@ -85,11 +54,10 @@ const AboutPage = ({ data }) => {
             content="Nazywam się Adam i jestem specjalistą od wyrobów cukierniczych. Już od młodych lat moim marzeniem było tworzyć poezję dla smaku. W późniejszych latach prowadziłem jedną z pierwszych cukiernii w Żorach. Powiada, że smak słodki najlepszy jest na smutki. Cechuje mnie dbałość o detale, ponieważ w mojej pracy ważne jest to by nie tylko smakowało, ale i wyglądało."
             signature="Adam Gembalczyk"
           />
-        </StyledAboutCardWrapper>
-      </StyledWrapper>
+        </AboutCardWrapper>
+      </Wrapper>
     </Layout>
   );
-};
 
 export const query = graphql`
   {

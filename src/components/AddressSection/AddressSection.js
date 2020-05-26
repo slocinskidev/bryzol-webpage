@@ -14,14 +14,14 @@ const StyledWrapper = styled.section`
 `;
 
 const MapIcon = styled(Icon)`
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.secondary};
   width: 35px;
   height: 35px;
   margin-right: 10px;
 `;
 
 const StyledAddressList = styled.ul`
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.secondary};
   text-align: center;
   list-style: none;
   font-weight: 500;
@@ -34,7 +34,7 @@ const AddressSection = ({ dinners }) => {
       <StyledAddressList>
         <li>ul. Bramkowa 3</li>
         <li>44-240 Żory</li>
-        {dinners && <li>godz. 14:00 - 19:00</li>}
+        {dinners && <li>godz. 13:00 - 19:00</li>}
       </StyledAddressList>
     </StyledWrapper>
   );

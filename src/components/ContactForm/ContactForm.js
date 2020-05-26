@@ -10,7 +10,7 @@ const StyledWrapper = styled.section`
   width: 100%;
   max-width: 500px;
   height: 100%;
-  margin: 120px auto 40px;
+  margin: 60px auto 40px;
 `;
 
 const StyledForm = styled.form`
@@ -70,6 +70,7 @@ const Button = styled.button`
 
 const StyledHeading = styled.h3`
   text-align: center;
+  color: ${({ theme }) => theme.color.dark};
   font-size: 2.4rem;
   font-weight: 700;
   margin: 0;

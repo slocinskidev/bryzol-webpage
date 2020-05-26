@@ -1002,6 +1002,11 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-ls/-/icons-ls-1.0.3.tgz#a108dc5bc1ed936ddb3fe77bd4b51ede2805569d"
   integrity sha512-RCsyLnkH5le3YRdOambN5avEcn1Au4xB9ApYqF0I8StRGFtND3IxtoB2n6OUIroFCIedCKuZ1gulzsqIzJe+LQ==
 
+"@iconify/icons-twemoji@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-twemoji/-/icons-twemoji-1.0.10.tgz#705f96834ae94b10d5ec89c6259cf6bc6cb4d8fe"
+  integrity sha512-Xbp4uHnvCvoEYp3oCB7Eb4YVOG6uEuYY+zsx6dfcZFasO9YpfkthDOFPGwpXSKFtUAG26urFdkEF7AxPDslpaQ==
+
 "@iconify/icons-whh@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@iconify/icons-whh/-/icons-whh-1.0.3.tgz#cd313d534ab6d28a87fbd0b67d8e47ce87fe8ba9"

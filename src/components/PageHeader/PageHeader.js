@@ -20,7 +20,7 @@ const HeaderWrapper = styled.header`
 `;
 
 const IconStyled = styled(Icon)`
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.secondary};
   width: 50px;
   height: 50px;
   transition: color 0.3s ease;
@@ -29,7 +29,7 @@ const IconStyled = styled(Icon)`
   &:active,
   &:hover svg,
   &:active svg {
-    color: ${({ theme }) => theme.color.secondary};
+    color: ${({ theme }) => theme.color.primary};
   }
 `;
 

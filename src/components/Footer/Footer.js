@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../styles/mainTheme';
 
-const StyledFooterWrapper = styled.footer`
+const FooterWrapper = styled.footer`
   margin: 0;
   display: flex;
   align-items: center;
@@ -12,15 +12,15 @@ const StyledFooterWrapper = styled.footer`
   width: 100%;
 `;
 
-const StyledCopyrightText = styled.p`
+const CopyrightText = styled.p`
   color: ${({ theme }) => theme.color.white};
   font-size: 12px;
 `;
 
 const Footer = () => (
-  <StyledFooterWrapper>
-    <StyledCopyrightText>© 2020 Bryzol Catering</StyledCopyrightText>
-  </StyledFooterWrapper>
+  <FooterWrapper>
+    <CopyrightText>{`© ${new Date().getFullYear()} Bryzol Catering`}</CopyrightText>
+  </FooterWrapper>
 );
 
 export default Footer;

@@ -4,19 +4,6 @@ import posed from 'react-pose';
 import styled from 'styled-components';
 import { theme } from '../../styles/mainTheme';
 
-// Pose
-const PosedNavigationList = posed.ul({
-  visible: {
-    delayChildren: 50,
-    staggerChildren: 100,
-  },
-});
-
-const PosedNavigationListItem = posed.li({
-  visible: { y: 0, opacity: 1 },
-  hidden: { y: '-50%', opacity: 0 },
-});
-
 const NavigationWrapper = styled.nav`
   width: 100%;
   height: 100%;
@@ -24,7 +11,7 @@ const NavigationWrapper = styled.nav`
   padding-bottom: 10px;
 `;
 
-const NavigationList = styled(PosedNavigationList)`
+const NavigationList = styled.ul`
   width: 100%;
   margin: 0;
   padding: 0;
@@ -33,7 +20,7 @@ const NavigationList = styled(PosedNavigationList)`
   flex-direction: column;
 `;
 
-const NavigationListItem = styled(PosedNavigationListItem)`
+const NavigationListItem = styled.li`
   width: 100%;
   margin: 0;
 `;
@@ -64,17 +51,9 @@ const LinkStyled = styled(AniLink)`
 `;
 
 const Navigation = () => {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(!visible);
-    }, 600);
-    return () => clearTimeout(timer);
-  }, []);
   return (
     <NavigationWrapper>
-      <NavigationList pose={visible ? 'visible' : 'hidden'}>
+      <NavigationList>
         <NavigationListItem>
           <LinkStyled fade to="/o-nas">
             O Nas

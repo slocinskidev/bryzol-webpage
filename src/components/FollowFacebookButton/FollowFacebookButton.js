@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Icon } from '@iconify/react';
-import posed from 'react-pose';
 import facebookFilled from '@iconify/icons-ant-design/facebook-filled';
 import styled from 'styled-components';
 import { theme } from '../../styles/mainTheme';
 
-const PosedButtonWrapper = posed.div({
-  visible: {
-    x: 0,
-    opacity: 1,
-  },
-  hidden: {
-    x: '-50%',
-    opacity: 0,
-  },
-});
-
-const ButtonWrapper = styled(PosedButtonWrapper)`
+const ButtonWrapper = styled.div`
   margin: 0;
   width: 100%;
   display: flex;
@@ -58,24 +46,13 @@ const FacebookLink = styled.a`
   }
 `;
 
-const FacebookButton = () => {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(!visible);
-    }, 1200);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <ButtonWrapper pose={visible ? 'visible' : 'hidden'}>
-      <FacebookLink href="https://www.facebook.com/bryzolcatering/">
-        Sprawdź nas na
-        <IconStyled icon={facebookFilled} />
-      </FacebookLink>
-    </ButtonWrapper>
-  );
-};
+const FacebookButton = () => (
+  <ButtonWrapper>
+    <FacebookLink href="https://www.facebook.com/bryzolcatering/">
+      Sprawdź nas na
+      <IconStyled icon={facebookFilled} />
+    </FacebookLink>
+  </ButtonWrapper>
+);
 
 export default FacebookButton;

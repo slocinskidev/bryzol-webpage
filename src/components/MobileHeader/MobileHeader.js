@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import { theme } from '../../styles/mainTheme';
-
-const LogoWrapper = styled.div`
+const Wrapper = styled.figure`
   width: 150px;
   height: 150px;
   background-image: url(${({ image }) => image});
@@ -25,7 +23,7 @@ const MobileHeader = () => {
 
   return (
     <a href="/">
-      <LogoWrapper image={data.file.childImageSharp.fixed.src} />
+      <Wrapper image={data.file.childImageSharp.fixed.src} />
     </a>
   );
 };

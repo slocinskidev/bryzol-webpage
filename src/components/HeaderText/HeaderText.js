@@ -11,27 +11,7 @@ const Mobile = ({ children }) => {
   return isMobile ? children : null;
 };
 
-const PosedWrapper = posed.div({
-  visible: {
-    x: 0,
-    opacity: 1,
-  },
-  hidden: {
-    x: '-150%',
-    opacity: 0,
-  },
-});
-
-const PosedTitle = posed.h2({
-  visible: {
-    opacity: 1,
-  },
-  hidden: {
-    opacity: 0,
-  },
-});
-
-const StyledTitle = styled(PosedTitle)`
+const StyledTitle = styled.h2`
   font-family: ${({ theme }) => theme.font.secondary};
   font-weight: 400;
   font-size: ${({ theme }) => theme.font.h2};
@@ -43,16 +23,7 @@ const StyledTitle = styled(PosedTitle)`
   }
 `;
 
-const PosedSubtitle = posed.p({
-  visible: {
-    opacity: 1,
-  },
-  hidden: {
-    opacity: 0,
-  },
-});
-
-const StyledSubtitle = styled(PosedSubtitle)`
+const StyledSubtitle = styled.p`
   text-align: center;
   padding: 10px;
   margin: 0;
@@ -61,7 +32,7 @@ const StyledSubtitle = styled(PosedSubtitle)`
   max-width: 650px;
 `;
 
-const StyledWrapper = styled(PosedWrapper)`
+const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,33 +48,13 @@ const StyledWrapper = styled(PosedWrapper)`
   }
 `;
 
-const PosedLogoWrapper = posed.div({
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-  hidden: {
-    y: '50%',
-    opacity: 1,
-  },
-});
-
-const StyledLogoWrapper = styled(PosedLogoWrapper)`
+const StyledLogoWrapper = styled.div`
   width: 150px;
   height: 150px;
   background-image: url(${({ image }) => image});
 `;
 
 const HeaderText = () => {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(!visible);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
-
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "logo" }) {
@@ -122,12 +73,11 @@ const HeaderText = () => {
         <a href="/">
           <StyledLogoWrapper
             image={data.file.childImageSharp.fixed.src}
-            pose={visible ? 'visible' : 'hidden'}
           />
         </a>
       </Mobile>
-      <StyledTitle pose={visible ? 'visible' : 'hidden'}>Mania Gotowania</StyledTitle>
-      <StyledSubtitle pose={visible ? 'visible' : 'hidden'}>
+      <StyledTitle>Mania Gotowania</StyledTitle>
+      <StyledSubtitle>
         Bryzol Catering to firma oferująca usługi cateringu zarówno słonego, jak i słodkiego.
         Wszelkie oferty tworzone są pod potrzeby Klienta. Firmę stworzyli dwaj pasjonaci. Jeden
         lubuje się w gotowaniu i tworzeniu nowoczesnych w formie dań ze znanych nam klasyków. Drugi
