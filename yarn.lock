@@ -982,6 +982,11 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-bx/-/icons-bx-1.0.1.tgz#8401e6915ffa0a35c04b3ba3199b1709ff2e91c4"
   integrity sha512-vxEz3niHjxEKCuGcXWakysVknQKtxCYjSrnTjvR3M78iw3O+vdSKZ0nxsGSIT7LswYVwigbgCkljpjcHqfK3tw==
 
+"@iconify/icons-carbon@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-carbon/-/icons-carbon-1.0.1.tgz#c7d9197ace6b023eb3607c19cb2ddf8e1b73c92b"
+  integrity sha512-jjbwaaNU+ooGaEAzPyCcse+amk9r6e+gxeg1c0tYUf7YynVanQHCEIGl6mgGpKL4fENYYtFb4sEKcQLRPBYRtA==
+
 "@iconify/icons-el@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@iconify/icons-el/-/icons-el-1.0.4.tgz#e858a571bbae80cc64f3c8a356d05f154e22fc3b"
@@ -1001,6 +1006,11 @@
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@iconify/icons-ls/-/icons-ls-1.0.3.tgz#a108dc5bc1ed936ddb3fe77bd4b51ede2805569d"
   integrity sha512-RCsyLnkH5le3YRdOambN5avEcn1Au4xB9ApYqF0I8StRGFtND3IxtoB2n6OUIroFCIedCKuZ1gulzsqIzJe+LQ==
+
+"@iconify/icons-noto@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-noto/-/icons-noto-1.0.10.tgz#18c42a76fc95a58cefadf8a7b5a1c2121553c577"
+  integrity sha512-3aJm9s9N977Uv9q/7Zo4iMfQ+prtGUNc16JxH3e+sPno4gj7hmToH0Mot02yqThcZRo9y0mzpyM2/Qdnc9V/0A==
 
 "@iconify/icons-twemoji@^1.0.10":
   version "1.0.10"

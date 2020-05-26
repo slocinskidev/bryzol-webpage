@@ -43,6 +43,7 @@ const StyledInfoWrapper = styled.ul`
   height: 100%;
 
   @media (min-width: 992px) {
+    order: -1;
     margin: 0;
   }
 `;
@@ -52,6 +53,7 @@ const Heading = styled.h3`
   font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
+  margin: 60px 0 20px;
 `;
 
 const Telephone = styled.a`
@@ -115,6 +117,7 @@ const MoreInfo = styled.p`
   text-align: center;
   font-weight: 500;
   font-size: 2rem;
+  margin: 60px 0 0;
 `;
 
 const Facebook = styled.a`
@@ -158,6 +161,8 @@ const PriceList = styled.ul`
 
   li {
     text-align: center;
+    margin: 0 0 10px;
+    padding: 0;
   }
 `;
 
@@ -172,6 +177,7 @@ const DinnerPage = ({ data }) => {
           <PageHeader nested title="Obiady" subtitle={subtitleWithDate} />
         </StyledPageHeaderWrapper>
         <ContentWrapper>
+          <DinnerList />
           <StyledInfoWrapper>
             <Heading>
               Zamówienia przyjmujemy do godziny 9:00 bieżącego dnia za pośrednictwem:
@@ -199,17 +205,16 @@ const DinnerPage = ({ data }) => {
             <Heading>Ile to kosztuje?</Heading>
             <PriceList>
               <li>
-                Pojedyńczy obiad: <strong>20zł</strong>
+                Pojedyńczy obiad: <strong>20 zł</strong>
               </li>
               <li>
-                Pakiet na cały tydzień: <strong>126zł</strong>
+                Pakiet na cały tydzień: <strong>126 zł</strong>
               </li>
               <li>
-                Pakiet na cały miesiąc <strong>527zł</strong>
+                Pakiet na cały miesiąc: <strong>527 zł</strong>
               </li>
             </PriceList>
           </StyledInfoWrapper>
-          <DinnerList />
         </ContentWrapper>
       </Wrapper>
     </Layout>

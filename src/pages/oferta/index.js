@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Icon } from '@iconify/react';
 import bxCalendar from '@iconify/icons-bx/bx-calendar';
+import fireIcon from '@iconify/icons-noto/fire';
 import Layout from '../../layouts/Layout';
 import OfferItem from '../../components/OfferItem/OfferItem';
 import PageHeader from '../../components/PageHeader/PageHeader';
@@ -246,6 +247,20 @@ const OfferPage = () => {
           <PageHeader title="Oferta" subtitle="Kliknij by wyświetlić szczegóły" />
         </StyledPageHeaderWrapper>
         <StyledContentWrapper>
+          <SectionWrapper>
+            <DinnerWrapper>
+              <StyledIcon icon={fireIcon} />
+              <HeadingDescription>
+                Połączenie idealnie chrupiącego ciasta z wysokiej jakości składnikami
+              </HeadingDescription>
+              <StyledIcon icon={fireIcon} />
+            </DinnerWrapper>
+
+            <StyledLink fade to="/oferta/ciasto-ogniowe">
+              Ciasto ogniowe
+            </StyledLink>
+          </SectionWrapper>
+
           <SectionWrapper>
             <DinnerWrapper>
               <StyledIcon icon={bxCalendar} />

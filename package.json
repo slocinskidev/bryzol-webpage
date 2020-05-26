@@ -7,10 +7,12 @@
   "dependencies": {
     "@iconify/icons-ant-design": "^1.0.6",
     "@iconify/icons-bx": "^1.0.1",
+    "@iconify/icons-carbon": "^1.0.1",
     "@iconify/icons-el": "^1.0.4",
     "@iconify/icons-foundation": "^1.0.3",
     "@iconify/icons-ic": "^1.0.9",
     "@iconify/icons-ls": "^1.0.3",
+    "@iconify/icons-noto": "^1.0.10",
     "@iconify/icons-twemoji": "^1.0.10",
     "@iconify/icons-whh": "^1.0.3",
     "@iconify/react": "^1.1.3",
