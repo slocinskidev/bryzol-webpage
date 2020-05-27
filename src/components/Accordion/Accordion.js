@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import Chevron from '../Chevron/Chevron';
 
 import { theme } from '../../styles/mainTheme';

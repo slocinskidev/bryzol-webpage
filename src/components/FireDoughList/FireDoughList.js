@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '@iconify/react';
-import mealIcon from '@iconify/icons-ls/meal';
+import leafIcon from '@iconify/icons-mdi/leaf';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
@@ -10,7 +10,7 @@ import { theme } from '../../styles/mainTheme';
 const Header = styled(Image)`
   height: 100%;
   width: 100%;
-  margin: 0 auto;
+  margin: 20px auto 0;
 `;
 
 const Wrapper = styled.article`
@@ -23,11 +23,12 @@ const Wrapper = styled.article`
   box-shadow: ${({ theme }) => theme.shadow.box};
 `;
 
-const StyledIcon = styled(Icon)`
+const VegeIcon = styled(Icon)`
   color: ${({ theme }) => theme.color.dark};
   width: 25px;
   height: 25px;
-  margin-right: 10px;
+  margin: 0 0 10px 5px;
+  color: green;
 `;
 
 const DoughList = styled.ul`
@@ -35,11 +36,48 @@ const DoughList = styled.ul`
   color: ${({ theme }) => theme.color.white};
 `;
 
-const Item = styled.li``;
+const Item = styled.li`
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-size: 2rem;
+  width: 100%;
+  margin: 20px 0 40px;
+`;
 
-const Number = styled.p``;
-const Price = styled.p``;
-const Products = styled.p``;
+const Top = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 20px 0 0;
+  font-weight: 700;
+`;
+
+const Number = styled.p`
+  margin: 0 10px 0 0;
+  color: #999;
+  font-weight: 700;
+`;
+
+const Price = styled.p`
+  margin: 0;
+
+  &::after {
+    content: 'PLN';
+    font-size: 2rem;
+  }
+`;
+
+const Products = styled.p`
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: 992px) {
+    width: 60%;
+  }
+`;
 
 const fireDough = [
   {
@@ -55,8 +93,26 @@ const fireDough = [
   {
     number: 3,
     price: 19,
-    products: 'sos czosnkowy, cebula, brokuł, papryka,  ser',
+    products: 'sos czosnkowy, cebula, papryka, brokuł, ser',
+    vege: true,
+  },
+  {
+    number: 4,
+    price: 25,
+    products: 'sos czosnkowy, łosoś, krewetki, tuńczyk, cebula, ser',
     vege: false,
+  },
+  {
+    number: 5,
+    price: 22,
+    products: 'sos czosnkowy, cebula, szynka surowa, ser grano padano, rukolla',
+    vege: false,
+  },
+  {
+    number: 6,
+    price: 20,
+    products: 'sos czosnkowy, rokpol, grano padano, mozarella, rukolla',
+    vege: true,
   },
 ];
 
@@ -65,7 +121,7 @@ const FireDoughList = () => {
     {
       file(name: { eq: "firedoughlogo" }) {
         childImageSharp {
-          fixed(width: 320) {
+          fixed(width: 280) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -78,10 +134,12 @@ const FireDoughList = () => {
       <DoughList>
         {fireDough.map(item => (
           <Item>
-            <Number>{item.number}</Number>
-            <Price>{item.price}</Price>
+            <Top>
+              <Number>{item.number}.</Number>
+              <Price>{item.price},00</Price>
+              {item.vege && <VegeIcon icon={leafIcon} />}
+            </Top>
             <Products>{item.products}</Products>
-            {item.vege && <StyledIcon icon={mealIcon} />}
           </Item>
         ))}
       </DoughList>

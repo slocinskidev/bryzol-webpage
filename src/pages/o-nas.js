@@ -34,30 +34,30 @@ const AboutCardWrapper = styled.section`
 `;
 
 const AboutPage = ({ data }) => (
-    <Layout>
-      <Wrapper>
-        <PageHeaderWrapper>
-          <PageHeader title="O Nas" subtitle="Kliknij by wyświetlić szczegóły" />
-        </PageHeaderWrapper>
-        <AboutCardWrapper>
-          <AboutCard
-            name="Andrzej Słociński"
-            more="Szef kuchni"
-            avatar={data.allFile.nodes[0].childImageSharp.fluid.src}
-            content="Mam na imię Andrzej, od kilkunastu lat zajmuję się gastronomią, a konkretnie profesjonalną i kompleksową obsługą imprez okolicznościowych u klienta. Jestem osobą staranną i wszystkie powierzone mi zlecenia wykonuję na najwyższym poziomie. Staram się dopasować do gustów podniebienia i oczekiwań klienta. Nie ma rzeczy niemożliwych, możemy odtworzyć danie z dalekiej podróży i wakacji. Zawsze dla mnie najważniejszy jest klient i jego zadowolenie z wykonania mojej pracy. Daje mi to energię i inspirację do dalszego kształcenia oraz podnoszenia moich kwalifikacji."
-            signature="Andrzej Słociński"
-          />
-          <AboutCard
-            name="Adam Gembalczyk"
-            more="Specjalista od wyrobów cukierniczych"
-            avatar={data.allFile.nodes[1].childImageSharp.fluid.src}
-            content="Nazywam się Adam i jestem specjalistą od wyrobów cukierniczych. Już od młodych lat moim marzeniem było tworzyć poezję dla smaku. W późniejszych latach prowadziłem jedną z pierwszych cukiernii w Żorach. Powiada, że smak słodki najlepszy jest na smutki. Cechuje mnie dbałość o detale, ponieważ w mojej pracy ważne jest to by nie tylko smakowało, ale i wyglądało."
-            signature="Adam Gembalczyk"
-          />
-        </AboutCardWrapper>
-      </Wrapper>
-    </Layout>
-  );
+  <Layout>
+    <Wrapper>
+      <PageHeaderWrapper>
+        <PageHeader title="O Nas" subtitle="Kliknij by wyświetlić szczegóły" />
+      </PageHeaderWrapper>
+      <AboutCardWrapper>
+        <AboutCard
+          name="Andrzej Słociński"
+          more="Mania gotowania"
+          avatar={data.allFile.nodes[0].childImageSharp.fluid.src}
+          content="Mam na imię Andrzej, od kilkunastu lat zajmuję się gastronomią, a konkretnie profesjonalną i kompleksową obsługą imprez okolicznościowych u klienta. Jestem osobą staranną i wszystkie powierzone mi zlecenia wykonuję na najwyższym poziomie. Staram się dopasować do gustów podniebienia i oczekiwań klienta. Nie ma rzeczy niemożliwych, możemy odtworzyć danie z dalekiej podróży i wakacji. Zawsze dla mnie najważniejszy jest klient i jego zadowolenie z wykonania mojej pracy. Daje mi to energię i inspirację do dalszego kształcenia oraz podnoszenia moich kwalifikacji."
+          signature="Andrzej Słociński"
+        />
+        <AboutCard
+          name="Adam Gembalczyk"
+          more="Specjalista od wyrobów cukierniczych"
+          avatar={data.allFile.nodes[1].childImageSharp.fluid.src}
+          content="Nazywam się Adam i jestem specjalistą od wyrobów cukierniczych. Już od młodych lat moim marzeniem było tworzyć poezję dla smaku. W późniejszych latach prowadziłem jedną z pierwszych cukiernii w Żorach. Powiada, że smak słodki najlepszy jest na smutki. Cechuje mnie dbałość o detale, ponieważ w mojej pracy ważne jest to by nie tylko smakowało, ale i wyglądało."
+          signature="Adam Gembalczyk"
+        />
+      </AboutCardWrapper>
+    </Wrapper>
+  </Layout>
+);
 
 export const query = graphql`
   {

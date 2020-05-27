@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import posed from 'react-pose';
 import { useMediaQuery } from 'react-responsive';
 import { graphql, useStaticQuery } from 'gatsby';
 
@@ -71,9 +70,7 @@ const HeaderText = () => {
     <StyledWrapper>
       <Mobile>
         <a href="/">
-          <StyledLogoWrapper
-            image={data.file.childImageSharp.fixed.src}
-          />
+          <StyledLogoWrapper image={data.file.childImageSharp.fixed.src} />
         </a>
       </Mobile>
       <StyledTitle>Mania Gotowania</StyledTitle>

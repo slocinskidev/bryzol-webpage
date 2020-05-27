@@ -1007,6 +1007,11 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-ls/-/icons-ls-1.0.3.tgz#a108dc5bc1ed936ddb3fe77bd4b51ede2805569d"
   integrity sha512-RCsyLnkH5le3YRdOambN5avEcn1Au4xB9ApYqF0I8StRGFtND3IxtoB2n6OUIroFCIedCKuZ1gulzsqIzJe+LQ==
 
+"@iconify/icons-mdi@^1.0.106":
+  version "1.0.106"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-mdi/-/icons-mdi-1.0.106.tgz#b417d931bae745d4431f43dd368a7554d8fc7350"
+  integrity sha512-F50WQkVPs/saU4Ou5U8PzQyr/kHLQyQ0OwiXSaECz//RWXr8P5o0ok+xsP6BTi/guaCQZtlY9SofmZDHgCwgAw==
+
 "@iconify/icons-noto@^1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@iconify/icons-noto/-/icons-noto-1.0.10.tgz#18c42a76fc95a58cefadf8a7b5a1c2121553c577"

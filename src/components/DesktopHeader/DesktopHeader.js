@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import posed from 'react-pose';
+import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 

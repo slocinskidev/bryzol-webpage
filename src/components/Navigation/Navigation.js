@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import posed from 'react-pose';
 import styled from 'styled-components';
 import { theme } from '../../styles/mainTheme';
 

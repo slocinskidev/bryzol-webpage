@@ -16,6 +16,8 @@ const Wrapper = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: 992px) {
     padding: 20px 20px 100px;
@@ -23,6 +25,10 @@ const Wrapper = styled.div`
 `;
 
 const ContentWrapper = styled.main`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: auto;
 
@@ -35,17 +41,20 @@ const StyledPageHeaderWrapper = styled.div`
   padding: 20px 0 40px;
 `;
 
-const StyledInfoWrapper = styled.ul`
+const StyledInfoWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto 60px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 0 60px;
   width: 100%;
   height: 100%;
 
   @media (min-width: 992px) {
     order: -1;
     margin: 0;
+    padding: 0 40px 60px;
   }
 `;
 
@@ -114,6 +123,28 @@ const Heading = styled.h2`
   text-transform: uppercase;
 `;
 
+const OpenHeading = styled.h2`
+  color: ${({ theme }) => theme.color.dark};
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 60px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  display: grid;
+
+  & > strong {
+    font-size: 2.4rem;
+    color: ${({ theme }) => theme.color.secondary};
+  }
+
+  @media (min-width: 992px) {
+    margin: 0;
+  }
+`;
+
 const DeliveryWrapper = styled.section`
   width: 100%;
 `;
@@ -148,6 +179,10 @@ const FireDoughPage = ({ data }) => {
         <ContentWrapper>
           <FireDoughList />
           <StyledInfoWrapper>
+            <OpenHeading>
+              Otwarte codziennie
+              <strong>14:00 - 20:00</strong>
+            </OpenHeading>
             <TelephoneHeading>Zadzwoń i zamów!</TelephoneHeading>
             <Telephone href="tel:502315715">
               <TelephoneIcon icon={telephoneIcon} />
