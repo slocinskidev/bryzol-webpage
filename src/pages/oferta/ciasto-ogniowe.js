@@ -197,20 +197,20 @@ const FireDoughPage = ({ data }) => {
               <DeliveryMore>Na terenie Żor</DeliveryMore>
               <DeliveryInfo>
                 <li>
-                  Zamówienie do 30 zł - <strong>3 zł</strong>
+                  Zamówienie do 30zł - <strong>3zł</strong>
                 </li>
                 <li>
-                  Zamówienie powyżej 30 zł - <strong>gratis</strong>
+                  Zamówienie powyżej 30zł - <strong>gratis</strong>
                 </li>
               </DeliveryInfo>
 
               <DeliveryMore>Poza terenem Żor</DeliveryMore>
               <DeliveryInfo>
                 <li>
-                  Zamówienie do 100 zł - <strong>1 zł za każdy kilometr</strong>
+                  Zamówienie do 100zł - <strong>1zł za każdy kilometr</strong>
                 </li>
                 <li>
-                  Zamówienie powyżej 100 zł - <strong>gratis</strong>
+                  Zamówienie powyżej 100zł - <strong>gratis</strong>
                 </li>
               </DeliveryInfo>
             </DeliveryWrapper>

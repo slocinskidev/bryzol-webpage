@@ -55,10 +55,10 @@ const CompanyName = styled.h3`
 `;
 
 const AccountNumber = styled.h3`
-  margin: 0 0 20px;
+  margin: 0 0 40px;
   padding: 0;
   color: ${({ theme }) => theme.color.dark};
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-align: center;
   font-weight: 500;
   display: flex;
@@ -70,8 +70,8 @@ const StyledIcon = styled(Icon)`
   color: ${({ theme }) => theme.color.primary};
   margin-right: 10px;
   padding: 0;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 `;
 
 const ContactPage = ({ data }) => (

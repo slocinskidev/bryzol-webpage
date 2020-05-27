@@ -15,6 +15,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: 992px) {
     padding: 20px 20px 100px;
@@ -22,6 +26,10 @@ const Wrapper = styled.div`
 `;
 
 const ContentWrapper = styled.main`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: auto;
 
@@ -34,17 +42,20 @@ const StyledPageHeaderWrapper = styled.div`
   padding: 20px 0 40px;
 `;
 
-const StyledInfoWrapper = styled.ul`
+const StyledInfoWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto 60px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 0 60px;
   width: 100%;
   height: 100%;
 
   @media (min-width: 992px) {
     order: -1;
     margin: 0;
+    padding: 0 40px 60px;
   }
 `;
 
@@ -205,13 +216,13 @@ const DinnerPage = ({ data }) => {
             <Heading>Ile to kosztuje?</Heading>
             <PriceList>
               <li>
-                Pojedyńczy obiad: <strong>20 zł</strong>
+                Pojedyńczy obiad: <strong>20zł</strong>
               </li>
               <li>
-                Pakiet na cały tydzień: <strong>126 zł</strong>
+                Pakiet na cały tydzień: <strong>126zł</strong>
               </li>
               <li>
-                Pakiet na cały miesiąc: <strong>527 zł</strong>
+                Pakiet na cały miesiąc: <strong>527zł</strong>
               </li>
             </PriceList>
           </StyledInfoWrapper>
