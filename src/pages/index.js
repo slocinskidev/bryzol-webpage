@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout';
 import HeaderText from '../components/HeaderText/HeaderText';
 import Navigation from '../components/Navigation/Navigation';
 import FacebookButton from '../components/FollowFacebookButton/FollowFacebookButton';
+import SEO from '../components/Seo/Seo';
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -20,6 +21,7 @@ const IndexPage = () => (
   <>
     <Mobile>
       <MainPageMobileLayout>
+        <SEO title="Strona główna" />
         <HeaderText />
         <FacebookButton />
         <Navigation />

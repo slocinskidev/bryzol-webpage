@@ -9,6 +9,7 @@ import Layout from '../../layouts/Layout';
 import FireDoughList from '../../components/FireDoughList/FireDoughList';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import AddressSection from '../../components/AddressSection/AddressSection';
+import SEO from '../../components/Seo/Seo';
 
 const Wrapper = styled.div`
   display: flex;
@@ -173,6 +174,7 @@ const FireDoughPage = ({ data }) => {
   return (
     <Layout>
       <Wrapper>
+        <SEO title="Ciasto ogniowe" />
         <StyledPageHeaderWrapper>
           <PageHeader nested title="Ciasto ogniowe" subtitle="Zadzwoń i zamów!" />
         </StyledPageHeaderWrapper>

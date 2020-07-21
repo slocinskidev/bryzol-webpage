@@ -9,6 +9,7 @@ import ContactCard from '../components/ContactCard/ContactCard';
 import AddressSection from '../components/AddressSection/AddressSection';
 import Map from '../components/Map/Map';
 import ContactForm from '../components/ContactForm/ContactForm';
+import SEO from '../components/Seo/Seo';
 
 const Wrapper = styled.div`
   display: flex;
@@ -77,6 +78,7 @@ const StyledIcon = styled(Icon)`
 const ContactPage = ({ data }) => (
   <Layout>
     <Wrapper>
+      <SEO title="Kontakt" />
       <PageHeaderWrapper>
         <PageHeader title="Kontakt" subtitle="Zadzwoń, napisz lub skorzystaj z formularza" />
       </PageHeaderWrapper>

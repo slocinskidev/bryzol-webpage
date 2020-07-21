@@ -54,22 +54,22 @@ const Navigation = () => {
     <NavigationWrapper>
       <NavigationList>
         <NavigationListItem>
-          <LinkStyled fade to="/o-nas">
+          <LinkStyled fade duration={0.2} to="/o-nas">
             O Nas
           </LinkStyled>
         </NavigationListItem>
         <NavigationListItem>
-          <LinkStyled fade to="/oferta">
+          <LinkStyled fade duration={0.2} to="/oferta">
             Oferta
           </LinkStyled>
         </NavigationListItem>
         <NavigationListItem>
-          <LinkStyled fade to="/galeria">
+          <LinkStyled fade duration={0.2} to="/galeria">
             Galeria
           </LinkStyled>
         </NavigationListItem>
         <NavigationListItem>
-          <LinkStyled fade to="/kontakt">
+          <LinkStyled fade duration={0.2} to="/kontakt">
             Kontakt
           </LinkStyled>
         </NavigationListItem>

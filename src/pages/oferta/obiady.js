@@ -10,6 +10,7 @@ import Layout from '../../layouts/Layout';
 import DinnerList from '../../components/DinnerList/DinnerList';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import AddressSection from '../../components/AddressSection/AddressSection';
+import SEO from '../../components/Seo/Seo';
 
 const Wrapper = styled.div`
   display: flex;
@@ -184,6 +185,7 @@ const DinnerPage = ({ data }) => {
   return (
     <Layout>
       <Wrapper>
+        <SEO title="Obiady" />
         <StyledPageHeaderWrapper>
           <PageHeader nested title="Obiady" subtitle={subtitleWithDate} />
         </StyledPageHeaderWrapper>

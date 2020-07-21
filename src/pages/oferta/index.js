@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import posed from 'react-pose';
 import styled from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Icon } from '@iconify/react';
@@ -8,7 +7,7 @@ import fireIcon from '@iconify/icons-noto/fire';
 import Layout from '../../layouts/Layout';
 import OfferItem from '../../components/OfferItem/OfferItem';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import Accordion from '../../components/Accordion/Accordion';
+import SEO from '../../components/Seo/Seo';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -243,6 +242,7 @@ const OfferPage = () => {
   return (
     <Layout>
       <StyledWrapper>
+        <SEO title="Oferta" />
         <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
           <PageHeader title="Oferta" subtitle="Kliknij by wyświetlić szczegóły" />
         </StyledPageHeaderWrapper>

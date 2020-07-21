@@ -5,6 +5,7 @@ import posed from 'react-pose';
 import Layout from '../layouts/Layout';
 import AboutCard from '../components/AboutCard/AboutCard';
 import PageHeader from '../components/PageHeader/PageHeader';
+import SEO from '../components/Seo/Seo';
 
 const Wrapper = styled.div`
   display: flex;
@@ -36,6 +37,7 @@ const AboutCardWrapper = styled.section`
 const AboutPage = ({ data }) => (
   <Layout>
     <Wrapper>
+      <SEO title="O Nas" />
       <PageHeaderWrapper>
         <PageHeader title="O Nas" subtitle="Kliknij by wyświetlić szczegóły" />
       </PageHeaderWrapper>

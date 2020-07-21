@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Image from 'gatsby-image';
 import Layout from '../layouts/Layout';
 import PageHeader from '../components/PageHeader/PageHeader';
+import SEO from '../components/Seo/Seo';
 
 const PosedPageHeaderWrapper = posed.div({
   visible: {
@@ -83,6 +84,7 @@ const NotFoundPage = ({ data }) => {
   return (
     <Layout>
       <StyledWrapper>
+        <SEO title="Nie znaleziono strony" />
         <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
           <PageHeader title="Brak strony" subtitle="Nie znaleziono strony" />
         </StyledPageHeaderWrapper>

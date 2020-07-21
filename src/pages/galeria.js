@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Layout from '../layouts/Layout';
 import PageHeader from '../components/PageHeader/PageHeader';
 import Gallery from '../components/Gallery/Gallery';
+import SEO from '../components/Seo/Seo';
 
 const Wrapper = styled.div`
   display: flex;
@@ -24,6 +25,7 @@ const GalleryPage = () => {
   return (
     <Layout>
       <Wrapper>
+        <SEO title="Galeria" />
         <PageHeaderWrapper>
           <PageHeader title="Galeria" subtitle="Kliknij by powiększyć zdjęcie" />
         </PageHeaderWrapper>
