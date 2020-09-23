@@ -229,7 +229,7 @@ const offerData = {
   ],
 };
 
-const OfferPage = () => {
+const OfferPage = ({ location }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -242,7 +242,7 @@ const OfferPage = () => {
   return (
     <Layout>
       <StyledWrapper>
-        <SEO title="Oferta" />
+        <SEO title="Oferta" pathname={location.pathname} />
         <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
           <PageHeader title="Oferta" subtitle="Kliknij by wyświetlić szczegóły" />
         </StyledPageHeaderWrapper>

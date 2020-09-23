@@ -21,11 +21,11 @@ const PageHeaderWrapper = styled.div`
   padding: 20px 0 40px;
 `;
 
-const GalleryPage = () => {
+const GalleryPage = ({ location }) => {
   return (
     <Layout>
       <Wrapper>
-        <SEO title="Galeria" />
+        <SEO title="Galeria" pathname={location.pathname} />
         <PageHeaderWrapper>
           <PageHeader title="Galeria" subtitle="Kliknij by powiększyć zdjęcie" />
         </PageHeaderWrapper>

@@ -5,11 +5,14 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Bryzol Catering`,
-    titleTemplate: '%s · Mania Gotowania',
-    description: `Bryzol Catering to firma oferująca usługi cateringu zarówno słonego, jak i słodkiego. Wszelkie oferty tworzone są pod potrzeby Klienta. Firmę stworzyli dwaj pasjonaci. Jeden lubuje się w gotowaniu i tworzeniu nowoczesnych w formie dań ze znanych nam klasyków. Drugi za to wymyśla grzechu warte desery i torty.`,
-    author: `Eryk Słociński`,
+    description: `Bryzol Catering to firma oferująca usługi cateringu zarówno słonego, jak i słodkiego.
+    Wszelkie oferty tworzone są pod potrzeby Klienta. Firmę stworzyli dwaj pasjonaci Andrzej
+    Słociński i Adam Gembalczyk. Jeden lubuje się w gotowaniu i tworzeniu nowoczesnych w formie
+    dań ze znanych nam klasyków, drugi za to wymyśla grzechu warte desery i torty.`,
+    author: `Bryzol Catering`,
+    keywords: `bryzol, mania gotowania`,
     image: '/images/logo.png',
-    url: `https://bryzol.pl/`,
+    url: `https://bryzol-webpage.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -43,8 +46,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `bryzol-webpage`,
-        short_name: `bryzol`,
+        name: `Bryzol Catering`,
+        short_name: `Bryzol`,
         start_url: `/`,
         lang: `pl`,
         background_color: `#52542C`,

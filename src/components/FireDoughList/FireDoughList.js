@@ -133,7 +133,7 @@ const FireDoughList = () => {
       <Header fixed={data.file.childImageSharp.fixed} alt="Ciasto Ogniowe" />
       <DoughList>
         {fireDough.map(item => (
-          <Item>
+          <Item key={item.number}>
             <Top>
               <Number>{item.number}.</Number>
               <Price>{item.price},00</Price>

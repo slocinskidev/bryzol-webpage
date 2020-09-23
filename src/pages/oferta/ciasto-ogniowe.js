@@ -170,11 +170,11 @@ const StyledIcon = styled(Icon)`
   margin: 0 10px 10px;
 `;
 
-const FireDoughPage = ({ data }) => {
+const FireDoughPage = ({ location }) => {
   return (
     <Layout>
       <Wrapper>
-        <SEO title="Ciasto ogniowe" />
+        <SEO title="Ciasto ogniowe" pathname={location.pathname} />
         <StyledPageHeaderWrapper>
           <PageHeader nested title="Ciasto ogniowe" subtitle="Zadzwoń i zamów!" />
         </StyledPageHeaderWrapper>

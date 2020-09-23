@@ -71,7 +71,7 @@ const StyledImage = styled(Image)`
   margin: 0 auto;
 `;
 
-const NotFoundPage = ({ data }) => {
+const NotFoundPage = ({ data, location }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -84,7 +84,7 @@ const NotFoundPage = ({ data }) => {
   return (
     <Layout>
       <StyledWrapper>
-        <SEO title="Nie znaleziono strony" />
+        <SEO title="Nie znaleziono strony" pathname={location.pathname} />
         <StyledPageHeaderWrapper pose={visible ? 'visible' : 'hidden'}>
           <PageHeader title="Brak strony" subtitle="Nie znaleziono strony" />
         </StyledPageHeaderWrapper>

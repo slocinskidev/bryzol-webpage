@@ -75,10 +75,10 @@ const StyledIcon = styled(Icon)`
   height: 20px;
 `;
 
-const ContactPage = ({ data }) => (
+const ContactPage = ({ data, location }) => (
   <Layout>
     <Wrapper>
-      <SEO title="Kontakt" />
+      <SEO title="Kontakt" pathname={location.pathname} />
       <PageHeaderWrapper>
         <PageHeader title="Kontakt" subtitle="Zadzwoń, napisz lub skorzystaj z formularza" />
       </PageHeaderWrapper>

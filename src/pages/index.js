@@ -17,11 +17,11 @@ const Mobile = ({ children }) => {
   return isMobile ? children : null;
 };
 
-const IndexPage = () => (
+const IndexPage = ({ location }) => (
   <>
+    <SEO title="Strona główna" pathname={location.pathname} />
     <Mobile>
       <MainPageMobileLayout>
-        <SEO title="Strona główna" />
         <HeaderText />
         <FacebookButton />
         <Navigation />

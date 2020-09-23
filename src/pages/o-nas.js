@@ -34,10 +34,10 @@ const AboutCardWrapper = styled.section`
   }
 `;
 
-const AboutPage = ({ data }) => (
+const AboutPage = ({ data, location }) => (
   <Layout>
     <Wrapper>
-      <SEO title="O Nas" />
+      <SEO title="O Nas" pathname={location.pathname} />
       <PageHeaderWrapper>
         <PageHeader title="O Nas" subtitle="Kliknij by wyświetlić szczegóły" />
       </PageHeaderWrapper>

@@ -178,14 +178,14 @@ const PriceList = styled.ul`
   }
 `;
 
-const DinnerPage = ({ data }) => {
+const DinnerPage = ({ data, location }) => {
   const lastDay = data.allDatoCmsDinner.nodes[0].weekDays.length - 1;
   const subtitleWithDate = `Menu cateringowe: ${data.allDatoCmsDinner.nodes[0].weekDays[0].date} - ${data.allDatoCmsDinner.nodes[0].weekDays[lastDay].date}`;
 
   return (
     <Layout>
       <Wrapper>
-        <SEO title="Obiady" />
+        <SEO title="Obiady" pathname={location.pathname} />
         <StyledPageHeaderWrapper>
           <PageHeader nested title="Obiady" subtitle={subtitleWithDate} />
         </StyledPageHeaderWrapper>
