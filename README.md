@@ -24,7 +24,7 @@ Website based on Gatsby.js for Bryzol Catering, this is a second webiste built f
 
 ## General info
 
-This project was created because I wanted to build real website, not from tutorial. This website is based on client needs. :rainbow:
+This project was created because I wanted to create a better version of the website than the one made about a year ago. I chose Gatsby for better SEO, PWA and for curiosity to learn new technology :rainbow:
 
 ## Screenshots
 
@@ -35,11 +35,16 @@ This project was created because I wanted to build real website, not from tutori
 - Gatsby.js
 - Styled-components
 - GraphQL
+- Prettier
+- ESLint
 - Figma
+- Firebase function -> [Bryzol Firebase](https://github.com/erq-programmer/bryzol-firebase)
 
 ## Features
 
-- Contact form with Firebase function -> [Bryzol Firebase](https://github.com/erq-programmer/bryzol-firebase)
+- Component SEO
+- Gallery with lightbox
+- Contact form with Formik and Firebase function -> [Bryzol Firebase](https://github.com/erq-programmer/bryzol-firebase)
 - Offer page with clickable product list, like shopping list...
 
 ## Status
@@ -48,7 +53,7 @@ Project is: _in progress_
 
 To-do list:
 
-- [ ] Offer page
+- [ ] Offer page with clickable product list
 
 ## Contact
 
