@@ -21,7 +21,7 @@ function SEO({ title, description, lang, meta, pathname }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}/${pathname}` : null;
 
   return (
     <Helmet

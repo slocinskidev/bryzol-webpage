@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -11,6 +11,10 @@ const StyledWrapper = styled.section`
   max-width: 500px;
   height: 100%;
   margin: 60px auto 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const StyledForm = styled.form`
@@ -63,6 +67,7 @@ const Button = styled.button`
   outline: none;
 
   &:hover,
+  &:target,
   &:focus {
     background-color: ${({ theme }) => theme.color.secondary};
   }
@@ -84,6 +89,34 @@ const StyledErrorMessage = styled.p`
 
 const ToastifyContainer = styled.div`
   display: none;
+`;
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const Loader = styled.span`
+  display: inline-block;
+  margin-top: 40px;
+  width: 80px;
+  height: 80px;
+  &::after {
+    content: ' ';
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid ${({ theme }) => theme.color.secondary};
+    border-color: ${({ theme }) => theme.color.secondary} transparent
+      ${({ theme }) => theme.color.secondary} transparent;
+    animation: ${rotate} 1.2s linear infinite;
+  }
 `;
 
 const ContactForm = () => {
@@ -121,47 +154,53 @@ const ContactForm = () => {
         }}
       >
         {({ values, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
-          <StyledForm onSubmit={handleSubmit}>
-            <StyledLabel htmlFor="name">Imię i nazwisko</StyledLabel>
-            <StyledInput
-              id="name"
-              type="text"
-              name="name"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.name}
-            />
-            <ErrorMessage component={StyledErrorMessage} name="name" />
-            <StyledLabel htmlFor="e-mail">E-mail</StyledLabel>
-            <StyledInput
-              id="email"
-              type="e-mail"
-              name="email"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-            />
-            <ErrorMessage component={StyledErrorMessage} name="email" />
-            <StyledLabel>Wiadomość</StyledLabel>
-            <StyledInput
-              as="textarea"
-              type="text"
-              name="message"
-              id="message"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.message}
-            />
-            <ErrorMessage component={StyledErrorMessage} name="message" />
-            <Button type="submit" disabled={isSubmitting}>
-              Wyślij
-            </Button>
-          </StyledForm>
+          <>
+            {isSubmitting ? (
+              <Loader />
+            ) : (
+              <StyledForm onSubmit={handleSubmit}>
+                <StyledLabel htmlFor="name">Imię i nazwisko</StyledLabel>
+                <StyledInput
+                  id="name"
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.name}
+                />
+                <ErrorMessage component={StyledErrorMessage} name="name" />
+                <StyledLabel htmlFor="e-mail">E-mail</StyledLabel>
+                <StyledInput
+                  id="email"
+                  type="e-mail"
+                  name="email"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                />
+                <ErrorMessage component={StyledErrorMessage} name="email" />
+                <StyledLabel>Wiadomość</StyledLabel>
+                <StyledInput
+                  as="textarea"
+                  type="text"
+                  name="message"
+                  id="message"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.message}
+                />
+                <ErrorMessage component={StyledErrorMessage} name="message" />
+                <Button type="submit" disabled={isSubmitting}>
+                  Wyślij
+                </Button>
+              </StyledForm>
+            )}
+          </>
         )}
       </Formik>
       <ToastifyContainer>
         {isSent
-          ? toast.success('Wiadomość została wysłana ', {
+          ? toast.success('Wiadomość została wysłana', {
               position: toast.POSITION.TOP_CENTER,
             })
           : ''}

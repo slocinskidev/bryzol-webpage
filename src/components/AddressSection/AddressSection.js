@@ -44,6 +44,10 @@ const StyledAddressList = styled.ul`
   list-style: none;
   font-weight: 500;
   font-size: 1.6rem;
+
+  & li {
+    padding-bottom: 5px;
+  }
 `;
 
 const AddressSection = ({ dinners }) => {

@@ -47,7 +47,7 @@ const Heading = styled.h3`
 `;
 
 const CompanyName = styled.h3`
-  margin: 0;
+  margin: 0 0 10px;
   padding: 0;
   color: ${({ theme }) => theme.color.secondary};
   font-size: 2.4rem;
@@ -56,7 +56,7 @@ const CompanyName = styled.h3`
 `;
 
 const AccountNumber = styled.h3`
-  margin: 0 0 40px;
+  margin: 10px 0 40px;
   padding: 0;
   color: ${({ theme }) => theme.color.dark};
   font-size: 1.6rem;

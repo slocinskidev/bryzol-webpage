@@ -7,6 +7,7 @@ const StyledImage = styled(Image)`
   min-height: 300px;
   height: 40vh;
   width: 100%;
+  display: block;
   object-fit: cover;
   object-position: bottom;
 
