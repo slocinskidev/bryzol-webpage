@@ -19,9 +19,8 @@ function SEO({ title, description, lang, meta, pathname }) {
       }
     `,
   );
-
   const metaDescription = description || site.siteMetadata.description;
-  const canonical = pathname ? `${site.siteMetadata.siteUrl}/${pathname}` : null;
+  const canonical = pathname ? `${site.siteMetadata.url}${pathname}` : `${site.siteMetadata.url}`;
 
   return (
     <Helmet
@@ -29,7 +28,7 @@ function SEO({ title, description, lang, meta, pathname }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`${site.siteMetadata.title}`}
       link={
         canonical
           ? [
@@ -63,7 +62,7 @@ function SEO({ title, description, lang, meta, pathname }) {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.url}/logo/logo.png`,
+          content: `${site.siteMetadata.url}/logo/maskable_icon.png`,
         },
         {
           property: `og:locale`,
