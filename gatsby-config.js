@@ -54,14 +54,10 @@ module.exports = {
         theme_color: `#52542C`,
         display: `standalone`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
-        icons: [
-          {
-            src: 'src/images/maskable_icon.png',
-            sizes: '196x196',
-            type: 'image/png',
-            purpose: 'maskable',
-          },
-        ],
+        icon_options: {
+          // For all the options available, please see the additional resources below.
+          purpose: `any maskable`,
+        },
       },
     },
     `gatsby-plugin-offline`,
