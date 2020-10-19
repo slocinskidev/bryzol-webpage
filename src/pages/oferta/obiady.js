@@ -57,6 +57,7 @@ const StyledInfoWrapper = styled.section`
     order: -1;
     margin: 0;
     padding: 0 40px 60px;
+    justify-content: flex-start;
   }
 `;
 
@@ -221,10 +222,7 @@ const DinnerPage = ({ data, location }) => {
                 Pojedyńczy obiad: <strong>20zł</strong>
               </li>
               <li>
-                Pakiet na cały tydzień: <strong>126zł</strong>
-              </li>
-              <li>
-                Pakiet na cały miesiąc: <strong>527zł</strong>
+                Pakiet na cały tydzień lub dłużej: <strong>18zł na dzień</strong>
               </li>
             </PriceList>
           </StyledInfoWrapper>
