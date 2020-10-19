@@ -145,7 +145,7 @@ const ContactCard = ({ name, tel, email, avatar }) => {
   return (
     <StyledWrapper>
       <StyledHeaderWrapper>
-        <StyledAvatarWrapper avatar={avatar} alt={`Zdjęcie ${name}`} />
+        <StyledAvatarWrapper avatar={avatar} />
         <StyledName>{name}</StyledName>
       </StyledHeaderWrapper>
       <StyledContactWrapper>
