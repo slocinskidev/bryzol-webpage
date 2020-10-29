@@ -1,15 +1,38 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Icon } from '@iconify/react';
 import telephoneIcon from '@iconify/icons-foundation/telephone';
 import MinimalistContactCard from '../MinimalistContactCard/MinimalistContactCard';
 
 import { theme } from '../../styles/mainTheme';
 
+const pulse = keyframes`
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	7% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	10% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+
+  13% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+`;
+
 const Telephone = styled.button`
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   bottom: 50px;
   right: 30px;
   margin: 0;
@@ -22,6 +45,7 @@ const Telephone = styled.button`
   z-index: 10;
   box-shadow: ${({ theme }) => theme.shadow.box};
   transition: box-shadow 0.3s ease;
+  animation: ${pulse} 5s infinite;
 
   &:hover,
   &:active {
@@ -31,13 +55,13 @@ const Telephone = styled.button`
 
 const TelephoneIcon = styled(Icon)`
   color: ${({ theme }) => theme.color.white};
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 `;
 
 const Body = styled.div`
   position: fixed;
-  bottom: 120px;
+  bottom: 140px;
   right: 0;
   background-color: ${({ theme }) => theme.color.secondary};
   opacity: 0;
