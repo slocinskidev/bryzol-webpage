@@ -11,7 +11,7 @@ module.exports = {
     dań ze znanych nam klasyków, drugi za to wymyśla grzechu warte desery i torty.`,
     author: `Bryzol Catering`,
     keywords: `bryzol, mania gotowania`,
-    image: '/images/logo.png',
+    image: '/images/maskable_icon.png',
     url: `https://bryzol-webpage.netlify.app`,
   },
   plugins: [
