@@ -1,11 +1,9 @@
 /* eslint-disable react/jsx-boolean-value */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import { Icon } from '@iconify/react';
 import telephoneIcon from '@iconify/icons-foundation/telephone';
-import outlineEmail from '@iconify/icons-ic/outline-email';
-import facebookFilled from '@iconify/icons-ant-design/facebook-filled';
 import Layout from '../../layouts/Layout';
 import DinnerList from '../../components/DinnerList/DinnerList';
 import PageHeader from '../../components/PageHeader/PageHeader';
@@ -97,68 +95,12 @@ const TelephoneIcon = styled(Icon)`
   margin-right: 10px;
 `;
 
-const Email = styled.a`
-  font-size: 1.6rem;
-  color: ${({ theme }) => theme.color.secondary};
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 500;
-
-  & svg {
-    transition: color 0.3s ease;
-  }
-
-  &:hover,
-  &:active,
-  &:hover svg,
-  &:active svg {
-    color: ${({ theme }) => theme.color.primary};
-  }
-`;
-
-const EmailIcon = styled(Icon)`
-  color: ${({ theme }) => theme.color.secondary};
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-`;
-
 const MoreInfo = styled.p`
   color: ${({ theme }) => theme.color.dark};
   text-align: center;
   font-weight: 500;
   font-size: 2rem;
   margin: 60px 0 0;
-`;
-
-const Facebook = styled.a`
-  font-size: 1.6rem;
-  color: ${({ theme }) => theme.color.secondary};
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 500;
-
-  & svg {
-    transition: color 0.3s ease;
-  }
-
-  &:hover,
-  &:active,
-  &:hover svg,
-  &:active svg {
-    color: ${({ theme }) => theme.color.primary};
-  }
-`;
-
-const FacebookIcon = styled(Icon)`
-  color: ${({ theme }) => theme.color.secondary};
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
 `;
 
 const LinkWrapper = styled.div`
@@ -197,18 +139,10 @@ const DinnerPage = ({ data, location }) => {
               Zamówienia przyjmujemy do godziny 9:00 bieżącego dnia za pośrednictwem:
             </Heading>
             <LinkWrapper>
-              <Facebook href="https://www.facebook.com/bryzolcatering">
-                <FacebookIcon icon={facebookFilled} />
-                @bryzolcatering
-              </Facebook>
               <Telephone href="tel:502315715">
                 <TelephoneIcon icon={telephoneIcon} />
                 502 315 715
               </Telephone>
-              <Email href="mailto:kontakt@bryzol.pl">
-                <EmailIcon icon={outlineEmail} />
-                kontakt@bryzol.pl
-              </Email>
             </LinkWrapper>
             <Heading>Odbiór zamówień możliwy jest pod adresem:</Heading>
             <AddressSection dinners />

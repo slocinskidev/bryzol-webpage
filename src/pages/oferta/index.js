@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Icon } from '@iconify/react';
 import bxCalendar from '@iconify/icons-bx/bx-calendar';
-import fireIcon from '@iconify/icons-noto/fire';
+// import fireIcon from '@iconify/icons-noto/fire';
+import MinimalistContactCard from '../../components/MinimalistContactCard/MinimalistContactCard';
 import Layout from '../../layouts/Layout';
 import OfferItem from '../../components/OfferItem/OfferItem';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import SEO from '../../components/Seo/Seo';
+import TelFixedButton from '../../components/TelFixedButton/TelFixedButton';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -19,6 +21,14 @@ const StyledWrapper = styled.div`
   @media (min-width: 992px) {
     padding: 20px 20px 100px;
   }
+`;
+
+const MinimalistContactCardWrapper = styled.section`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
 `;
 
 const StyledPageHeaderWrapper = styled.div`
@@ -98,14 +108,16 @@ const StyledIcon = styled(Icon)`
 const offerData = {
   foodKit: [
     {
-      item: 'Zestaw dla 10 osób - do samodzielnego wyłożenia',
+      item: 'Zestaw dań dla 10 osób',
+      description:
+        'Poniżej przedstawione są dania do wyboru, przy zamówieniu proszę o wybranie odpowiednich dań. Zestaw do samodzielnego wyłożenia.',
       content: [
-        'Polędwiczki wieprzowe z sosem pieprzowym lub grzybowym 6p.',
+        'Polędwiczki wieprzowe z sosem pieprzowym lub grzybowym 6 porcji',
         'Udko z kurczak b/k z rozmarynem lub udko z/k z czosnkiem 6szt.',
         'Schab z serem wędzonym lub pieczeń 6szt.',
         'Sznycelki drobiowe lub kotlet de volaille 6szt.',
-        'Pierś z kaczki z rozmarynem lub udko 6p.',
-        'Ziemniaki pieczone lub ziemniaki pure z boczkiem 10szt.',
+        'Pierś z kaczki z rozmarynem lub udko 6 porcji',
+        'Ziemniaki pieczone lub ziemniaki pure z boczkiem 10 porcji.',
         'Pęczatto z warzywami lub risotto z grzybami 1kg',
         'Kapusta lekka lub kapusta zasmażana 1,5kg',
       ],
@@ -113,6 +125,7 @@ const offerData = {
     },
     {
       item: 'Zestaw przekąsek dla 10 osób',
+      description: 'Wyłożone na paterach.',
       content: [
         'Sakiewki z szynki 16szt.',
         'Polędwiczki wieprzowe z suszonymi pomidorami 10szt.',
@@ -141,8 +154,10 @@ const offerData = {
   sheetMetalBanquet: [
     {
       item: 'Wiosenna',
+      description:
+        'Podane w korycie drewnianym lub podgrzewaczu lub do samodzielnego wyłożenia - proszę o wybór przy zamówieniu.',
       content: [
-        'Udko bez kości z rozmarynem 6szt.',
+        'Udko b/k z rozmarynem 6szt.',
         'Kotleciki drobiowe 10szt.',
         'Skrzydełka w miodzie 10szt.',
         'Schab z serem wędzonym 6szt.',
@@ -155,8 +170,10 @@ const offerData = {
     },
     {
       item: 'Letnia',
+      description:
+        'Podane w korycie drewnianym lub podgrzewaczu lub do samodzielnego wyłożenia - proszę o wybór przy zamówieniu.',
       content: [
-        'Udko bez kości z rozmarynem 5szt.',
+        'Udko b/k z rozmarynem 5szt.',
         'Pierogi ruskie 15szt.',
         'Karkówka z grilla 6szt.',
         'Kiełbaski pieczone 6szt.',
@@ -171,9 +188,11 @@ const offerData = {
     },
     {
       item: 'Jesienna',
+      description:
+        'Podane w korycie drewnianym lub podgrzewaczu lub do samodzielnego wyłożenia - proszę o wybór przy zamówieniu.',
       content: [
         'Pieczeń wieprzowa 1kg (8 plastrów)',
-        'Udko z kurczaka z czosnkiem 5szt.',
+        'Udko z kurczaka z/k z czosnkiem 5szt.',
         'Skrzydełka pikantne w miodzie 10szt.',
         'Rolada wieprzowa 5szt.',
         'Schab po cygańsku (cebula, szynka, panierka) 10szt.',
@@ -186,6 +205,8 @@ const offerData = {
     },
     {
       item: 'Zimowa',
+      description:
+        'Podane w korycie drewnianym lub podgrzewaczu lub do samodzielnego wyłożenia - proszę o wybór przy zamówieniu.',
       content: [
         'Pieczeń wieprzowa 1kg (ok. 8 plastrów)',
         'Golonki pieczone b/k 1kg (ok. 3szt.)',
@@ -202,6 +223,8 @@ const offerData = {
     },
     {
       item: 'Śląska',
+      description:
+        'Podane w korycie drewnianym lub podgrzewaczu lub do samodzielnego wyłożenia - proszę o wybór przy zamówieniu.',
       content: [
         'Rolada wołowa 6szt.',
         'Udko z kaczki 6szt.',
@@ -212,11 +235,14 @@ const offerData = {
         'Kluski śląskie 10 porcji',
         'Kapusta czerwona 1kg',
         'Colesław 1kg',
+        'Sos pieczeniowy 1l',
       ],
       price: '400 zł',
     },
     {
       item: 'Mięsna',
+      description:
+        'Podane w korycie drewnianym lub podgrzewaczu lub do samodzielnego wyłożenia - proszę o wybór przy zamówieniu.',
       content: [
         'Schab z serem wędzonym 5szt.',
         'Polędwiczki wieprzowe z sosem pieprzowym 5 porcji',
@@ -229,6 +255,8 @@ const offerData = {
     },
     {
       item: 'Wegetariańska',
+      description:
+        'Podane w korycie drewnianym lub podgrzewaczu lub do samodzielnego wyłożenia - proszę o wybór przy zamówieniu.',
       content: [
         'Ziemniaki faszerowane z serem i ziołami 10szt.',
         'Cukinia z suszonymi pomidorami i mozarellą 10szt.',
@@ -244,6 +272,7 @@ const offerData = {
   cateringOfferList: [
     {
       item: 'Ciepłe dania',
+      description: 'Zamówienie możliwe po wybraniu minimum 5 szt. lub 5 porcji jednego rodzaju.',
       content: [
         'Pieczeń z karczku z ziołami porcja',
         'Polędwiczki wieprzowe z sosem grzybowym lub pieprzowym porcja',
@@ -265,7 +294,7 @@ const offerData = {
         'Rolada wołowa (farsz krojony) szt.',
         'Golonka po bawarsku pieczona duszona w warzywach ok. 250g - szt.',
         'Udko z kurczaka b/k faszerowane z suszonymi pomidorami szt.',
-        'Udko z kurczaka z rozmarynem b/k szt.',
+        'Udko z kurczaka b/k z rozmarynem szt.',
         'Udko z kurczaka z/k z czosnkiem',
         'Stek z karkówki z grilla szt.',
         'Wołowina z orzechami nerkowca i selerem naciowym (kuchnia orientalna) porcja',
@@ -273,11 +302,12 @@ const offerData = {
         'Żeberka pieczone 150g - szt.',
         'Łosoś ze szpinakiem 150g - szt.',
         'Miruna w sosie maślane cytrynowym 120g - szt.',
-        'Krewetki w sosie 100g - porcja ',
+        'Krewetki w sosie czosnkowym 100g - porcja ',
       ],
     },
     {
-      item: 'Pieczenie - na zamówienie szt.',
+      item: 'Pieczenie',
+      description: 'Na zamówienie, minimum 1 szt.',
       content: [
         'Udziec wieprzowy pieczony 10-12kg 40-50 osób ',
         'Indyk b/k faszerowany mięsem 15-20 osób',
@@ -288,7 +318,9 @@ const offerData = {
       ],
     },
     {
-      item: 'Zupy (1 porcja - 350ml)',
+      item: 'Zupy',
+      description:
+        'Zamówienie możliwe po wybraniu minimum 5 porcji zupy jednego rodzaju (1 porcja - 350ml).',
       content: [
         'Krem z brokuł z grzankami',
         'Krem pieczarkowy z groszkiem ptysiowym',
@@ -311,7 +343,8 @@ const offerData = {
       ],
     },
     {
-      item: 'Przekąski zimne (minimum 5szt.)',
+      item: 'Przekąski zimne',
+      description: 'Zamówienie możliwe po wybraniu minimum 5 szt. lub 5 porcji jednego rodzaju.',
       content: [
         'Ruloniki z szynki z nadzieniem grzybowym lub chrzanowym szt.',
         'Ruloniki z sera żółtego z pastą orzechową szt.',
@@ -347,7 +380,9 @@ const offerData = {
       ],
     },
     {
-      item: 'Sałatki (1 miska dla 5-7 osób)',
+      item: 'Sałatki',
+      description:
+        'Zamówienie możliwe po wybraniu minimum 1 miski (1 miska jest liczona dla 5-7 osób).',
       content: [
         'Sałatka lekka - mix sałat, pomidorki, mango, kiełki, ogórek, pestki prażone, sos winegret',
         'Sałatka twarda - cukinia, pomidor, papryka, kiełki smażone, ser feta, zioła, czosnek, cytryna',
@@ -362,6 +397,7 @@ const offerData = {
     },
     {
       item: 'Dodatki',
+      description: 'Zamówienie możliwe po wybraniu minimum 5 szt. lub 5 porcji jednego rodzaju.',
       content: [
         'Ryż z groszkiem i marchewką (na ciepło) 100g - porcja',
         'Kluski śląskie jasne/ciemne ugotowane lub nie? 200g - porcja',
@@ -385,6 +421,7 @@ const offerData = {
     },
     {
       item: 'Desery',
+      description: 'Zamówienie możliwe po wybraniu minimum 10 szt. lub 10 porcji jednego rodzaju.',
       content: [
         'Krem czekoladowy',
         'Panna cotta',
@@ -424,7 +461,7 @@ const OfferPage = ({ location }) => {
           <PageHeader title="Oferta" subtitle="Kliknij by wyświetlić szczegóły" />
         </StyledPageHeaderWrapper>
         <StyledContentWrapper>
-          <SectionWrapper>
+          {/* <SectionWrapper>
             <DinnerWrapper>
               <StyledIcon icon={fireIcon} />
               <HeadingDescription>
@@ -436,7 +473,7 @@ const OfferPage = ({ location }) => {
             <StyledLink fade to="/oferta/ciasto-ogniowe">
               Ciasto ogniowe
             </StyledLink>
-          </SectionWrapper>
+          </SectionWrapper> */}
 
           <SectionWrapper>
             <DinnerWrapper>
@@ -447,18 +484,21 @@ const OfferPage = ({ location }) => {
               <StyledIcon icon={bxCalendar} />
             </DinnerWrapper>
 
-            <StyledLink fade to="/oferta/obiady">
+            <StyledLink fade duration={0.2} to="/oferta/obiady">
               Obiady
             </StyledLink>
           </SectionWrapper>
 
           <SectionWrapper>
             <MainHeading>Gotowe zestawy</MainHeading>
-            <HeadingDescription>Opis gotowych zestawów!</HeadingDescription>
+            <HeadingDescription>
+              Gotowy zestaw wraz z ceną, podawany do samodzielnego wyłożenia.
+            </HeadingDescription>
             {offerData.foodKit.map(offer => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
+                description={offer.description}
                 content={offer.content}
                 price={offer.price}
               />
@@ -466,14 +506,15 @@ const OfferPage = ({ location }) => {
           </SectionWrapper>
 
           <SectionWrapper>
-            <MainHeading>Blachy biesiadne</MainHeading>
+            <MainHeading>Blachy biesiadne (koryto)</MainHeading>
             <HeadingDescription>
-              Blachy biesiadne to idealny pomysł na imprezę dla 8-10 osób!
+              Blacha biesiadna (koryto) to idealny pomysł na imprezę dla 8-10 osób!
             </HeadingDescription>
             {offerData.sheetMetalBanquet.map(offer => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
+                description={offer.description}
                 content={offer.content}
                 price={offer.price}
               />
@@ -486,10 +527,24 @@ const OfferPage = ({ location }) => {
               Cena jest wyliczana indywidualnie dla każdego klienta na podstawie dań oraz ich
               ilości. W celu poznania ceny zapraszam do kontaktu!
             </HeadingDescription>
+            {/* <MinimalistContactCardWrapper>
+              <MinimalistContactCard
+                name="Andrzej Słociński"
+                tel="605 547 282"
+                email="slone@bryzol.pl"
+              />
+              <MinimalistContactCard
+                name="Adam Gembalczyk"
+                tel="502 315 715"
+                email="slodkie@bryzol.pl"
+              />
+            </MinimalistContactCardWrapper> */}
+
             {offerData.cateringOfferList.map(offer => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
+                description={offer.description}
                 content={offer.content}
                 price={offer.price}
               />
@@ -497,6 +552,7 @@ const OfferPage = ({ location }) => {
           </SectionWrapper>
         </StyledContentWrapper>
       </StyledWrapper>
+      <TelFixedButton />
     </Layout>
   );
 };

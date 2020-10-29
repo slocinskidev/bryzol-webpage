@@ -31,9 +31,10 @@ const Header = styled.header`
   padding: 15px 10px;
   width: 100%;
   background-color: ${({ theme }) => theme.color.primary};
-  transition: 0.6s background-color ease;
+  transition: background-color 0.3s ease;
 
-  &.active {
+  &.active,
+  &:hover {
     background-color: ${({ theme }) => theme.color.secondary};
   }
 `;
@@ -86,6 +87,15 @@ const Heading = styled.h3`
   color: ${({ theme }) => theme.color.white};
 `;
 
+const Description = styled.p`
+  margin: 0;
+  font-size: ${({ theme }) => theme.font.normal};
+  font-weight: 500;
+  color: ${({ theme }) => theme.color.dark};
+  text-align: justify;
+  padding: 20px;
+`;
+
 const Price = styled.li`
   display: flex;
   align-items: center;
@@ -102,7 +112,7 @@ const Price = styled.li`
   color: ${({ theme }) => theme.color.white};
 `;
 
-const OfferItem = ({ item, content, price }) => {
+const OfferItem = ({ item, description, content, price }) => {
   const [active, setActive] = useState(false);
 
   const contentRef = useRef(null);
@@ -122,6 +132,7 @@ const OfferItem = ({ item, content, price }) => {
         <ChevronStyled className={active ? 'rotate' : ''} width={25} height={25} fill="#fff" />
       </Header>
       <OfferList ref={contentRef}>
+        {description && <Description>{description}</Description>}
         {content.map(item => (
           <OfferListItem key={item}>{item}</OfferListItem>
         ))}
@@ -133,7 +144,12 @@ const OfferItem = ({ item, content, price }) => {
 
 OfferItem.propTypes = {
   item: PropTypes.string.isRequired,
+  description: PropTypes.string,
   content: PropTypes.array.isRequired,
+};
+
+OfferItem.defaultProps = {
+  description: null,
 };
 
 export default OfferItem;

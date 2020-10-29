@@ -58,7 +58,7 @@ const AddressSection = ({ dinners }) => {
         <StyledAddressList>
           <li>ul. Bramkowa 3</li>
           <li>44-240 Żory</li>
-          {dinners && <li>godz. 13:00 - 19:00</li>}
+          {dinners && <li>po godz. 13:00</li>}
         </StyledAddressList>
       </a>
     </StyledWrapper>
