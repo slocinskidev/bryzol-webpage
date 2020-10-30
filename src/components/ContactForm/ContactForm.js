@@ -128,12 +128,17 @@ const ContactForm = () => {
       <ToastContainer autoClose={3000} />
       <StyledHeading>Formularz kontaktowy</StyledHeading>
       <Formik
-        initialValues={{ name: '', email: '', message: '' }}
+        initialValues={{ name: '', email: '', tel: '', message: '' }}
         validationSchema={Yup.object().shape({
           name: Yup.string().required('Imię i nazwisko jest wymagane'),
           email: Yup.string()
             .email('Email jest niepoprawny')
             .required('Email jest wymagany'),
+          tel: Yup.number()
+            .typeError('Proszę o wprowadzenie poprawnego numeru telefonu')
+            .integer()
+            .positive()
+            .required('Telefon jest wymagany'),
           message: Yup.string().required('Treść wiadomości jest wymagana'),
         })}
         onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -179,6 +184,16 @@ const ContactForm = () => {
                   value={values.email}
                 />
                 <ErrorMessage component={StyledErrorMessage} name="email" />
+                <StyledLabel htmlFor="tel">Nr telefonu</StyledLabel>
+                <StyledInput
+                  id="tel"
+                  type="text"
+                  name="tel"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.tel}
+                />
+                <ErrorMessage component={StyledErrorMessage} name="tel" />
                 <StyledLabel>Wiadomość</StyledLabel>
                 <StyledInput
                   as="textarea"
