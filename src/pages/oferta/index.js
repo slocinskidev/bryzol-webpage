@@ -420,8 +420,9 @@ const offerData = {
       ],
     },
     {
-      item: 'Desery',
-      description: 'Zamówienie możliwe po wybraniu minimum 10 szt. lub 10 porcji jednego rodzaju.',
+      item: 'Mini deserki / finger food',
+      description:
+        'Zamówienie możliwe po wybraniu minimum 10 szt. jednego rodzaju (4,50 zł/szt.). ',
       content: [
         'Krem czekoladowy',
         'Panna cotta',
@@ -429,14 +430,20 @@ const offerData = {
         'Crème brûlée',
         'Szaszłyki owocowe',
         'Sałatka owocowa',
-        'Rolada biszkoptowa ze śmietaną i owocami',
-        'Sernik',
         'Chia z musem brzoskwiniowym',
-        'Carpaccio owocowe z cukrem ziołowym 4-6 osób',
         'Brownie',
-        'Sernik (16 kawałków)',
+      ],
+    },
+    {
+      item: 'Desery / ciasta',
+      description:
+        'Zamówienie możliwe po wybraniu minimum 1 szt. Torty zależnie od rozmiaru, mały: 70-90 zł, średni: 90-130 zł, duży: od 130 zł (napis, opłatek, zamówienia indywidualne, możliwość zamówienia tortu na ksylitolu cena - do ustalenia)',
+      content: [
+        'Rolada biszkoptowa ze śmietaną i owocami (min. 1kg) - 45 zł/kg',
+        'Carpaccio owocowe z cukrem ziołowym 4-6 osób - 30 zł',
+        'Sernik (16 kawałków - szt.) - 80 zł',
         'Tort szwarcwaldzki',
-        'Tort śmietana, owoce świeże',
+        'Tort śmietana, świeże owoce',
         'Tort pavlova',
       ],
     },
@@ -494,7 +501,7 @@ const OfferPage = ({ location }) => {
             <HeadingDescription>
               Gotowy zestaw wraz z ceną, podawany do samodzielnego wyłożenia.
             </HeadingDescription>
-            {offerData.foodKit.map(offer => (
+            {offerData.foodKit.map((offer) => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
@@ -510,7 +517,7 @@ const OfferPage = ({ location }) => {
             <HeadingDescription>
               Blacha biesiadna (koryto) to idealny pomysł na imprezę dla 8-10 osób!
             </HeadingDescription>
-            {offerData.sheetMetalBanquet.map(offer => (
+            {offerData.sheetMetalBanquet.map((offer) => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
@@ -540,7 +547,7 @@ const OfferPage = ({ location }) => {
               />
             </MinimalistContactCardWrapper> */}
 
-            {offerData.cateringOfferList.map(offer => (
+            {offerData.cateringOfferList.map((offer) => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}

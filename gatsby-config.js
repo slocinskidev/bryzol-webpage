@@ -10,7 +10,7 @@ module.exports = {
     Słociński i Adam Gembalczyk. Jeden lubuje się w gotowaniu i tworzeniu nowoczesnych w formie
     dań ze znanych nam klasyków, drugi za to wymyśla grzechu warte desery i torty.`,
     author: `Bryzol Catering`,
-    keywords: `bryzol, mania gotowania`,
+    keywords: `bryzol, mania gotowania, gotowanie, catering, bryzol catering, catering bryzol, catering bryzol żory, koryto, blachy biesiadne, koryto śląsk, koryto żory, koryto na imprezę, imprezy, imprezy okolicznościowe, andrzej słociński, słociński, adam gembalczyk, gembalczyk, słodkości, desery, torty, finger food, mini deserki, gotowanie na żywo, grillowanie, grill, catering żory, catering śląsk, jedzenie na dowóz`,
     image: '/images/maskable_icon.png',
     url: `https://bryzol-webpage.netlify.app`,
   },
