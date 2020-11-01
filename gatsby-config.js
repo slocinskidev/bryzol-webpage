@@ -12,7 +12,7 @@ module.exports = {
     author: `Bryzol Catering`,
     keywords: `bryzol, mania gotowania, gotowanie, catering, bryzol catering, catering bryzol, catering bryzol żory, koryto, blachy biesiadne, koryto śląsk, koryto żory, koryto na imprezę, imprezy, imprezy okolicznościowe, andrzej słociński, słociński, adam gembalczyk, gembalczyk, słodkości, desery, torty, finger food, mini deserki, gotowanie na żywo, grillowanie, grill, catering żory, catering śląsk, jedzenie na dowóz`,
     image: '/images/maskable_icon.png',
-    url: `https://bryzol-webpage.netlify.app`,
+    url: `https://bryzol.pl`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
