@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '@iconify/react';
 import soupIcon from '@iconify/icons-whh/soup';
