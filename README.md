@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://bryzol-webpage.netlify.com/">
+  <a href="https://bryzol.pl">
     <img src="/src/images/logo.png" alt="Bryzol Catering Logo" width="200px">
   </a>
 </p>
@@ -9,9 +9,7 @@
 
 Website based on Gatsby.js for Bryzol Catering, this is a second webiste built for this company.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d334e92c-0fe4-493b-b7f7-1655f88e7a55/deploy-status)](https://app.netlify.com/sites/bryzol-webpage/deploys)
-
-## [DEMO](https://bryzol-webpage.netlify.com/)
+## [PAGE](https://bryzol.pl)
 
 ## Table of contents
 
