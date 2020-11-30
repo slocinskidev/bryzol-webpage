@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Icon } from '@iconify/react';
 import bxCalendar from '@iconify/icons-bx/bx-calendar';
-// import fireIcon from '@iconify/icons-noto/fire';
+import fireIcon from '@iconify/icons-noto/fire';
 import MinimalistContactCard from '../../components/MinimalistContactCard/MinimalistContactCard';
 import Layout from '../../layouts/Layout';
 import OfferItem from '../../components/OfferItem/OfferItem';
@@ -468,7 +468,7 @@ const OfferPage = ({ location }) => {
           <PageHeader title="Oferta" subtitle="Kliknij by wyświetlić szczegóły" />
         </StyledPageHeaderWrapper>
         <StyledContentWrapper>
-          {/* <SectionWrapper>
+          <SectionWrapper>
             <DinnerWrapper>
               <StyledIcon icon={fireIcon} />
               <HeadingDescription>
@@ -480,7 +480,7 @@ const OfferPage = ({ location }) => {
             <StyledLink fade to="/oferta/ciasto-ogniowe">
               Ciasto ogniowe
             </StyledLink>
-          </SectionWrapper> */}
+          </SectionWrapper>
 
           <SectionWrapper>
             <DinnerWrapper>
@@ -501,7 +501,7 @@ const OfferPage = ({ location }) => {
             <HeadingDescription>
               Gotowy zestaw wraz z ceną, podawany do samodzielnego wyłożenia.
             </HeadingDescription>
-            {offerData.foodKit.map((offer) => (
+            {offerData.foodKit.map(offer => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
@@ -517,7 +517,7 @@ const OfferPage = ({ location }) => {
             <HeadingDescription>
               Blacha biesiadna (koryto) to idealny pomysł na imprezę dla 8-10 osób!
             </HeadingDescription>
-            {offerData.sheetMetalBanquet.map((offer) => (
+            {offerData.sheetMetalBanquet.map(offer => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
@@ -547,7 +547,7 @@ const OfferPage = ({ location }) => {
               />
             </MinimalistContactCardWrapper> */}
 
-            {offerData.cateringOfferList.map((offer) => (
+            {offerData.cateringOfferList.map(offer => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}

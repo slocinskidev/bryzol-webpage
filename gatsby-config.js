@@ -24,7 +24,7 @@ module.exports = {
     świąteczne, okoliczność, wigilijki, spotkania świąteczne, spotkania
     urodzinowe, urodziny osiemnaste catering, mały catering, super
     ceny, obiady żory, dobre pierogi, podpłomyki`,
-    image: '/images/maskable_icon.png',
+    image: 'static/logo/maskable_icon.png',
     url: `https://bryzol.pl`,
   },
   plugins: [

@@ -182,21 +182,21 @@ const FireDoughPage = ({ location }) => {
           <FireDoughList />
           <StyledInfoWrapper>
             <OpenHeading>
-              Otwarte codziennie
-              <strong>14:00 - 20:00</strong>
+              Otwarte od poniedziałku do piątku
+              <strong>14:00 - 18:00</strong>
             </OpenHeading>
             <TelephoneHeading>Zadzwoń i zamów!</TelephoneHeading>
             <Telephone href="tel:502315715">
               <TelephoneIcon icon={telephoneIcon} />
-              533 363 155
+              502 315 715
             </Telephone>
 
             <DeliveryWrapper>
               <Heading>
-                Dowóz
+                Dowozimy
                 <StyledIcon icon={deliveryTruck} />
               </Heading>
-              <DeliveryMore>Na terenie Żor</DeliveryMore>
+              {/* <DeliveryMore>Na terenie Żor</DeliveryMore>
               <DeliveryInfo>
                 <li>
                   Zamówienie do 30zł - <strong>3zł</strong>
@@ -214,7 +214,7 @@ const FireDoughPage = ({ location }) => {
                 <li>
                   Zamówienie powyżej 100zł - <strong>gratis</strong>
                 </li>
-              </DeliveryInfo>
+              </DeliveryInfo> */}
             </DeliveryWrapper>
 
             <Heading>Zamówienie można również odebrać pod adresem:</Heading>
