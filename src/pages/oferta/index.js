@@ -4,6 +4,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Icon } from '@iconify/react';
 import bxCalendar from '@iconify/icons-bx/bx-calendar';
 import fireIcon from '@iconify/icons-noto/fire';
+import christmasTree from '@iconify-icons/noto/christmas-tree';
 import MinimalistContactCard from '../../components/MinimalistContactCard/MinimalistContactCard';
 import Layout from '../../layouts/Layout';
 import OfferItem from '../../components/OfferItem/OfferItem';
@@ -470,6 +471,18 @@ const OfferPage = ({ location }) => {
         <StyledContentWrapper>
           <SectionWrapper>
             <DinnerWrapper>
+              <StyledIcon icon={christmasTree} />
+              <HeadingDescription>Specjalnie na święta!</HeadingDescription>
+              <StyledIcon icon={christmasTree} />
+            </DinnerWrapper>
+
+            <StyledLink fade to="/oferta/oferta-swiateczna">
+              Oferta Świąteczna
+            </StyledLink>
+          </SectionWrapper>
+
+          <SectionWrapper>
+            <DinnerWrapper>
               <StyledIcon icon={fireIcon} />
               <HeadingDescription>
                 Połączenie idealnie chrupiącego ciasta z wysokiej jakości składnikami
@@ -546,7 +559,6 @@ const OfferPage = ({ location }) => {
                 email="slodkie@bryzol.pl"
               />
             </MinimalistContactCardWrapper> */}
-
             {offerData.cateringOfferList.map(offer => (
               <OfferItem
                 key={offer.item}

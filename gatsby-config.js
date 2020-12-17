@@ -66,7 +66,7 @@ module.exports = {
         background_color: `#52542C`,
         theme_color: `#52542C`,
         display: `standalone`,
-        icon: `static/logo/maskable_icon.png`,
+        icon: `src/images/maskable_icon.png`,
         icon_options: {
           purpose: `any maskable`,
         },

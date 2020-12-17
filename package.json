@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Eryk Słociński <eryk.slocinski@gmail.com>",
   "dependencies": {
+    "@iconify-icons/noto": "^1.1.0",
     "@iconify/icons-ant-design": "^1.0.6",
     "@iconify/icons-bx": "^1.0.1",
     "@iconify/icons-carbon": "^1.0.1",
