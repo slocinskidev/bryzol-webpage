@@ -4,8 +4,6 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Icon } from '@iconify/react';
 import bxCalendar from '@iconify/icons-bx/bx-calendar';
 import fireIcon from '@iconify/icons-noto/fire';
-import christmasTree from '@iconify-icons/noto/christmas-tree';
-import MinimalistContactCard from '../../components/MinimalistContactCard/MinimalistContactCard';
 import Layout from '../../layouts/Layout';
 import OfferItem from '../../components/OfferItem/OfferItem';
 import PageHeader from '../../components/PageHeader/PageHeader';
@@ -22,14 +20,6 @@ const StyledWrapper = styled.div`
   @media (min-width: 992px) {
     padding: 20px 20px 100px;
   }
-`;
-
-const MinimalistContactCardWrapper = styled.section`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 100%;
 `;
 
 const StyledPageHeaderWrapper = styled.div`
@@ -469,18 +459,6 @@ const OfferPage = ({ location }) => {
           <PageHeader title="Oferta" subtitle="Kliknij by wyświetlić szczegóły" />
         </StyledPageHeaderWrapper>
         <StyledContentWrapper>
-          <SectionWrapper>
-            <DinnerWrapper>
-              <StyledIcon icon={christmasTree} />
-              <HeadingDescription>Specjalnie na święta!</HeadingDescription>
-              <StyledIcon icon={christmasTree} />
-            </DinnerWrapper>
-
-            <StyledLink fade to="/oferta/oferta-swiateczna">
-              Oferta Świąteczna
-            </StyledLink>
-          </SectionWrapper>
-
           <SectionWrapper>
             <DinnerWrapper>
               <StyledIcon icon={fireIcon} />
