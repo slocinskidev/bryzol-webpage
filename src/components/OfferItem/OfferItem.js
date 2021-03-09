@@ -112,6 +112,11 @@ const Price = styled.li`
   color: ${({ theme }) => theme.color.white};
 `;
 
+const OfferListItemPrice = styled.strong`
+  font-weight: 700;
+  color: ${({ theme }) => theme.color.primary};
+`;
+
 const OfferItem = ({ item, description, content, price }) => {
   const [active, setActive] = useState(false);
 
@@ -134,7 +139,10 @@ const OfferItem = ({ item, description, content, price }) => {
       <OfferList ref={contentRef}>
         {description && <Description>{description}</Description>}
         {content.map(item => (
-          <OfferListItem key={item}>{item}</OfferListItem>
+          <OfferListItem key={item.name}>
+            {item.name ? item.name : null}
+            {item.price ? <OfferListItemPrice> - {item.price}</OfferListItemPrice> : null}
+          </OfferListItem>
         ))}
         {price ? <Price>{price}</Price> : null}
       </OfferList>
