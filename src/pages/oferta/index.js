@@ -538,7 +538,7 @@ const offerData = {
         },
         { name: 'Marchewka mini z sosem serowym (na ciepło) 100g - porcja', price: '5 zł' },
         { name: 'Brokuły z sosem czosnkowym (na ciepło) 100g - porcja', price: '5 zł' },
-        { name: 'Marchewka z pomarańczami i bananem (na zimno) 100g - porcja', price: '999 zł' },
+        { name: 'Marchewka z pomarańczami i bananem (na zimno) 100g - porcja', price: '3 zł' },
         {
           name: 'Coleslaw (kapusta, cebula, chrzan, majonez, na zimno) 100g - porcja',
           price: '3 zł',
