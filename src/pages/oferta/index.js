@@ -133,17 +133,6 @@ const offerData = {
       ],
       price: '290 zł',
     },
-    {
-      item: 'Zestaw słodkości dla 10 osób',
-      content: [
-        { name: 'Krem czekoladowy 10szt.' },
-        { name: 'Panna cotta 10szt.' },
-        { name: 'Chia z jogurtem 10szt.' },
-        { name: 'Creme brulle 10szt.' },
-        { name: 'Tartaletki z kremem i owocami 10szt.' },
-      ],
-      price: '200 zł',
-    },
   ],
   sheetMetalBanquet: [
     {
@@ -461,7 +450,7 @@ const offerData = {
           name: 'Omlet z łososiem wędzonym (pokrojony na kawałki - jeden kęs) szt.',
           price: '2 zł',
         },
-        { name: 'Mini hamburgery z wołowiną (wołowina przed obróbką 60g) szt.', price: '4 zł' },
+        { name: 'Mini hamburgery z wołowiną (wołowina przed obróbką 60g) szt.', price: '6 zł' },
         { name: 'Pierożki (mięsne lub warzywne) na sałatce jarzynowej szt.', price: '3 zł' },
         { name: 'Kuleczki mięsne z tzatzykami szt.', price: '3 zł' },
         { name: 'Galantynka drobiowa z nadzieniem pieprzowym szt.', price: '3.50 zł' },
@@ -558,40 +547,40 @@ const offerData = {
         { name: 'Sos pieczeniowy litr', price: '10 zł' },
       ],
     },
-    {
-      item: 'Mini deserki / finger food',
-      description: 'Zamówienie możliwe po wybraniu minimum 10 szt. jednego rodzaju',
-      content: [
-        { name: 'Krem czekoladowy 1 szt.', price: '4.50 zł' },
-        { name: 'Panna cotta 1 szt.', price: '4.50 zł' },
-        { name: 'Tiramisu 1 szt.', price: '4.50 zł' },
-        { name: 'Szaszłyki owocowe 1 szt.', price: '4.50 zł' },
-        { name: 'Sałatka owocowa 1 szt.', price: '4.50 zł' },
-        { name: 'Chia z musem brzoskwiniowym 1 szt.', price: '4.50 zł' },
-        { name: 'Brownie 1 szt.', price: '4.50 zł' },
-      ],
-    },
-    {
-      item: 'Desery / torty / ciasta',
-      description: 'Zamówienie możliwe po wybraniu minimum 1 szt. Ceny zależne od wielkości.',
-      content: [
-        {
-          name: 'Rolada biszkoptowa ze śmietaną i owocami (min. 1kg, cena za 1kg)',
-          price: '45 zł',
-        },
-        { name: 'Carpaccio owocowe z cukrem ziołowym 4-6 osób', price: '30 zł' },
-        { name: 'Sernik (16 kawałków - szt.)', price: '80 zł' },
-        { name: 'Tort szwarcwaldzki', price: 'mały 100 zł, średni 120 zł, duży 150 zł' },
-        {
-          name: 'Tort ze śmietaną i świeżymi owocami (napis, opłatek, zamówienia indywidualne)',
-          price: 'mały: 80-90 zł, średni: 100-130 zł, duży: od 130 zł',
-        },
-        {
-          name: 'Pavlova ze śmietaną i serkiem mascarpone i świezymi owocami',
-          price: 'mała 100 zł, średnia 130 zł, duża 160 zł',
-        },
-      ],
-    },
+    // {
+    //   item: 'Mini deserki / finger food',
+    //   description: 'Zamówienie możliwe po wybraniu minimum 10 szt. jednego rodzaju',
+    //   content: [
+    //     { name: 'Krem czekoladowy 1 szt.', price: '4.50 zł' },
+    //     { name: 'Panna cotta 1 szt.', price: '4.50 zł' },
+    //     { name: 'Tiramisu 1 szt.', price: '4.50 zł' },
+    //     { name: 'Szaszłyki owocowe 1 szt.', price: '4.50 zł' },
+    //     { name: 'Sałatka owocowa 1 szt.', price: '4.50 zł' },
+    //     { name: 'Chia z musem brzoskwiniowym 1 szt.', price: '4.50 zł' },
+    //     { name: 'Brownie 1 szt.', price: '4.50 zł' },
+    //   ],
+    // },
+    // {
+    //   item: 'Desery / torty / ciasta',
+    //   description: 'Zamówienie możliwe po wybraniu minimum 1 szt. Ceny zależne od wielkości.',
+    //   content: [
+    //     {
+    //       name: 'Rolada biszkoptowa ze śmietaną i owocami (min. 1kg, cena za 1kg)',
+    //       price: '45 zł',
+    //     },
+    //     { name: 'Carpaccio owocowe z cukrem ziołowym 4-6 osób', price: '30 zł' },
+    //     { name: 'Sernik (16 kawałków - szt.)', price: '80 zł' },
+    //     { name: 'Tort szwarcwaldzki', price: 'mały 100 zł, średni 120 zł, duży 150 zł' },
+    //     {
+    //       name: 'Tort ze śmietaną i świeżymi owocami (napis, opłatek, zamówienia indywidualne)',
+    //       price: 'mały: 80-90 zł, średni: 100-130 zł, duży: od 130 zł',
+    //     },
+    //     {
+    //       name: 'Pavlova ze śmietaną i serkiem mascarpone i świezymi owocami',
+    //       price: 'mała 100 zł, średnia 130 zł, duża 160 zł',
+    //     },
+    //   ],
+    // },
   ],
 };
 
@@ -613,7 +602,7 @@ const OfferPage = ({ location }) => {
           <PageHeader title="Oferta" subtitle="Kliknij by wyświetlić szczegóły" />
         </StyledPageHeaderWrapper>
         <StyledContentWrapper>
-          <SectionWrapper>
+          {/* <SectionWrapper>
             <DinnerWrapper>
               <StyledIcon icon={fireIcon} />
               <HeadingDescription>
@@ -625,7 +614,7 @@ const OfferPage = ({ location }) => {
             <StyledLink fade duration={0.2} to="/oferta/ciasto-ogniowe">
               Ciasto ogniowe
             </StyledLink>
-          </SectionWrapper>
+          </SectionWrapper> */}
 
           <SectionWrapper>
             <DinnerWrapper>
@@ -646,7 +635,7 @@ const OfferPage = ({ location }) => {
             <HeadingDescription>
               Gotowy zestaw wraz z ceną, podawany do samodzielnego wyłożenia.
             </HeadingDescription>
-            {offerData.foodKit.map(offer => (
+            {offerData.foodKit.map((offer) => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
@@ -662,7 +651,7 @@ const OfferPage = ({ location }) => {
             <HeadingDescription>
               Blacha biesiadna (koryto) to idealny pomysł na imprezę dla 8-10 osób!
             </HeadingDescription>
-            {offerData.sheetMetalBanquet.map(offer => (
+            {offerData.sheetMetalBanquet.map((offer) => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
@@ -691,7 +680,7 @@ const OfferPage = ({ location }) => {
                 email="slodkie@bryzol.pl"
               />
             </MinimalistContactCardWrapper> */}
-            {offerData.cateringOfferList.map(offer => (
+            {offerData.cateringOfferList.map((offer) => (
               <OfferItem
                 key={offer.item}
                 item={offer.item}
