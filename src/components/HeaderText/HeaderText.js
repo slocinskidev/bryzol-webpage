@@ -75,10 +75,8 @@ const HeaderText = () => {
       </Mobile>
       <StyledTitle>Mania Gotowania</StyledTitle>
       <StyledSubtitle>
-        Bryzol Catering to firma oferująca usługi cateringu zarówno słonego, jak i słodkiego.
-        Wszelkie oferty tworzone są pod potrzeby Klienta. Firmę stworzyli dwaj pasjonaci Andrzej
-        Słociński i Adam Gembalczyk. Jeden lubuje się w gotowaniu i tworzeniu nowoczesnych w formie
-        dań ze znanych nam klasyków, drugi za to wymyśla grzechu warte desery i torty.
+        Bryzol Catering to firma oferująca usługi cateringu. Wszelkie oferty tworzone są pod
+        potrzeby Klienta. Firmę stworzyli dwaj pasjonaci Andrzej Słociński i Adam Gembalczyk.
       </StyledSubtitle>
     </StyledWrapper>
   );

@@ -135,8 +135,10 @@ const DinnerPage = ({ data, location }) => {
         <ContentWrapper>
           <DinnerList />
           <StyledInfoWrapper>
+            <Heading>Zamieszczamy menu na ten tydzień ❗❗</Heading>
             <Heading>
-              Zamówienia przyjmujemy do godziny 9:00 bieżącego dnia za pośrednictwem:
+              Zamówienia na kolejny dzień przyjmujemy do godziny 9:00 tego samego dnia poprzez
+              wiadomości na facebooku, oraz:
             </Heading>
             <LinkWrapper>
               <Telephone href="tel:502315715">
@@ -147,16 +149,16 @@ const DinnerPage = ({ data, location }) => {
             <Heading>Odbiór zamówień możliwy jest pod adresem:</Heading>
             <AddressSection dinners />
             <MoreInfo>
-              Transport obiadu na terenie Żor to 2zł. Cenę za dowóz do innych miejscowości ustalamy
-              indywidualnie.
+              Transport obiadu na terenie Żor to <strong>0zł</strong>. Cenę za dowóz do innych
+              miejscowości ustalamy indywidualnie 🤝
             </MoreInfo>
             <Heading>Ile to kosztuje?</Heading>
             <PriceList>
               <li>
-                Pojedyńczy obiad: <strong>20zł</strong>
+                Od poniedziałku do soboty to <strong>20zł</strong>
               </li>
               <li>
-                Pakiet na cały tydzień lub dłużej: <strong>18zł na dzień</strong>
+                Obiad niedzielny to <strong>27zł</strong>
               </li>
             </PriceList>
           </StyledInfoWrapper>
