@@ -9,8 +9,6 @@
 
 Website based on Gatsby.js for Bryzol Catering, this is a second webiste built for this company.
 
-## [PAGE](https://bryzol.pl)
-
 ## Table of contents
 
 - [General info](#general-info)
